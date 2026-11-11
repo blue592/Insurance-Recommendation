@@ -19,3 +19,14 @@
 - [Gemini 대화 공유 링크](https://share.gemini.google/ZUuPwisJKDJ4)
 
 이번 등록에서는 파일 보관 및 원본 일치 여부만 확인했으며, HTML 실행·기능 테스트 결과는 작성하지 않았습니다.
+
+## ChatGPT·Claude 초안
+
+HTML 3개와 대화 기록 3개를 `미션 2-2/제작검증/초안`에 모았습니다. 기존 파일명과 내용을 유지한 경로 정리입니다.
+
+- [챗지피티_보험추천v1.html](초안/챗지피티_보험추천v1.html): ChatGPT 제작 초안
+- [보험추천v1.html](초안/보험추천v1.html): ChatGPT 초안의 기존 원본 파일명; 챗지피티_보험추천v1.html과 내용 동일
+- [챗지피티대화내역.md](초안/챗지피티대화내역.md): ChatGPT HTML 제작 및 파일명 지정 커밋 대화 기록
+- [html제작요청.md](초안/html제작요청.md): ChatGPT 최초 HTML 제작 요청과 커밋 대화 기록
+- [보험추천_클로드.html](초안/보험추천_클로드.html): Claude 제작 초안
+- [클로드대화내역.md](초안/클로드대화내역.md): Claude HTML 제작 과정 및 당시 확인 범위에 대한 대화 기록
