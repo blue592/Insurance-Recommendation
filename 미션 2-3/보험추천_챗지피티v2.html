@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light">
+<meta name="description" content="관심 단어로 탐색하는 보험상품 50개. 인터넷 연결 없이 검색하고 비교하세요.">
+<title>보험추천 · 나에게 필요한 보장을 찾는 시간</title>
+<style>
+:root{--ink:#25354b;--muted:#65758b;--blue:#456ae7;--blue-dark:#3554bc;--pale:#edf2ff;--line:#e2e8ef;--paper:#fff;--bg:#f7f9fc;--mint:#e9f6ef;--green:#347558;--lavender:#f0edfc;--peach:#fff1e7;--radius:22px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;word-break:keep-all;overflow-wrap:anywhere}button,input{font:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button{color:inherit}button:disabled{cursor:default;opacity:.48}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7d99fa;outline-offset:4px}button svg{flex-shrink:0}svg{width:20px;height:20px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}[hidden]{display:none!important}h1,h2,h3,p{margin:0}button{border:0;background:none}header{height:88px;border-bottom:1px solid var(--line);background:#ffffffd9}.wrap{width:min(1120px,calc(100% - 64px));margin:0 auto}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;gap:11px;align-items:center;font-size:20px;font-weight:800;letter-spacing:-.8px;padding:0}.brand-symbol{display:grid;place-items:center;width:40px;height:42px;border-radius:13px;background:var(--blue);color:white}.brand-symbol svg{width:24px;height:24px}.brand small{font-size:11px;letter-spacing:.8px;color:#7a8ba0;font-weight:500;display:block;line-height:1.1}.nav{display:flex;padding:5px;background:#f2f5fa;border-radius:14px;gap:4px}.nav button{padding:8px 15px;border-radius:10px;font-size:14px;color:var(--muted);display:flex;gap:7px;align-items:center;font-weight:600}.nav .active{color:var(--blue-dark);background:white;box-shadow:0 2px 6px #25354b09}.counter{font-size:11px;background:#e5eafb;border-radius:7px;min-width:19px;text-align:center}.hero{text-align:center;padding:55px 0 27px}.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.2px;color:var(--green);background:var(--mint);padding:5px 12px;border-radius:20px;font-weight:600}.eyebrow i{width:6px;height:6px;background:#6b9c7e;border-radius:100%}h1{font-size:39px;line-height:1.35;letter-spacing:-1.9px;font-weight:750;margin:16px 0 13px}h1 em{font-style:normal;color:var(--blue)}.intro{color:var(--muted);font-size:15px}.search-panel{max-width:890px;margin:0 auto;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:25px 29px 21px;box-shadow:0 12px 45px #394e8110}.search-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:10px}.search-top label{font-weight:700;font-size:14px}.limit{color:#8490a1;font-size:12px}.search-row{display:flex;gap:11px;align-items:stretch}.input-wrap{display:flex;align-items:center;flex:1;min-width:0;border:1px solid #d8e0ef;border-radius:13px;background:#fafbfe;padding:12px 15px;gap:11px}.input-wrap:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px #456ae712}.input-wrap svg{color:#8393af;flex-shrink:0}input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font-size:16px;padding:2px 0}input::placeholder{color:#98a4b6}.primary{background:var(--blue);color:white;padding:13px 25px;border-radius:13px;font-weight:700;white-space:nowrap}.primary:hover{background:var(--blue-dark)}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.chip{display:flex;align-items:center;gap:5px;padding:4px 5px 4px 12px;background:var(--pale);border:1px solid #e0e7ff;border-radius:9px;color:#3b5caf;font-size:13px}.chip button{width:27px;height:27px;border-radius:6px;font-size:18px;line-height:1}.chip button:hover{background:#dce5ff}.hint{font-size:12px;color:var(--muted);margin-top:10px}.input-message{font-size:13px;color:#9e4c35;min-height:22px;margin-top:3px}.suggestions{display:flex;align-items:center;gap:7px;flex-wrap:wrap;border-top:1px solid #edf0f5;margin-top:11px;padding-top:14px;font-size:12px;color:#8290a2}.suggestions button{border-radius:7px;background:#f4f6fa;padding:4px 10px;color:#63728a}.suggestions button:hover{background:var(--pale);color:var(--blue)}.recent{max-width:890px;margin:17px auto 0;display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted)}.recent-title{white-space:nowrap;padding-top:4px}.recent-list{display:flex;gap:8px;flex-wrap:wrap;flex:1}.recent-list button{padding:3px 9px;border:1px solid var(--line);border-radius:7px;max-width:100%;text-align:left}.text-button{font-size:12px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;padding:3px 0;white-space:nowrap}.guide{padding:43px 0 37px}.section-caption{font-size:11px;letter-spacing:1.5px;color:#8692a3;margin-bottom:12px;font-weight:700}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.guide-card{background:white;border:1px solid var(--line);border-radius:17px;padding:22px;display:flex;align-items:flex-start;gap:14px}.guide-icon{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border-radius:12px;color:#5d78bb;background:var(--pale)}.guide-card:nth-child(2) .guide-icon{color:#6c6599;background:var(--lavender)}.guide-card:nth-child(3) .guide-icon{color:#55806a;background:var(--mint)}.guide-card h3{font-size:14px;margin:0 0 4px}.guide-card p{font-size:12px;line-height:1.7;color:var(--muted)}.results{margin-top:34px}.results-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:18px}.results-head h2,.favorites-title{font-size:24px;letter-spacing:-.8px;line-height:1.4}.results-head p{font-size:13px;color:var(--muted);margin-top:6px}.outline-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);background:white;border-radius:10px;padding:9px 13px;font-size:13px;white-space:nowrap}.outline-btn:hover{background:#f2f5fc}.stale{display:flex;align-items:center;gap:8px;background:#fff3df;color:#8a621b;border:1px solid #f3e1bb;padding:11px 15px;border-radius:12px;font-size:13px;margin-bottom:16px}.query-summary{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}.tag{display:inline-block;background:#f0f3f8;color:#62728a;border-radius:6px;font-size:11px;padding:3px 8px}.tag.condition{background:#eaf4ed;color:#537a60}.result-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.product-card{position:relative;background:white;border:1px solid var(--line);border-radius:19px;padding:22px 23px;display:flex;flex-direction:column;min-width:0}.product-card.first{border-color:#9cb4f4;box-shadow:0 4px 18px #456ae70c}.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.badge-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.rank{font-size:12px;font-weight:750;color:#576984}.first .rank{color:var(--blue)}.badge{font-size:11px;padding:3px 8px;border-radius:6px;color:#4b6aac;background:#edf2ff}.badge.similar{background:#f2edf9;color:#7b689d}.badge.condition{background:var(--mint);color:var(--green)}.favorite-btn{width:33px;height:33px;border-radius:9px;color:#94a1b2;display:grid;place-items:center;flex-shrink:0}.favorite-btn:hover{background:var(--pale)}.favorite-btn.selected{color:var(--blue);background:var(--pale)}.favorite-btn.selected svg{fill:#cfdbff}.insurer{color:var(--muted);font-size:12px;margin-bottom:6px}.product-card h3{font-size:18px;line-height:1.5;letter-spacing:-.5px;margin-bottom:12px}.coverage-list{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:17px}.coverage-list span{font-size:12px;border:1px solid #e5eaf0;border-radius:7px;color:#596d83;padding:3px 9px;background:#fbfcfe}.reason{background:#f7f9fc;border-radius:10px;padding:10px 12px;color:#536881;font-size:12px;margin-top:auto;margin-bottom:13px}.reason strong{font-weight:600;color:#475c79}.card-foot{display:flex;justify-content:space-between;gap:12px;align-items:end}.verified{font-size:11px;line-height:1.65;color:#8491a3}.detail-button{font-size:12px;color:var(--blue-dark);white-space:nowrap;display:flex;align-items:center;gap:3px;padding:7px 0}.detail-button svg{width:15px;height:15px}.result-note{font-size:13px;color:var(--muted);margin-top:15px;padding:13px 15px;background:#eef2f8;border-radius:10px}.more-wrap{text-align:center;margin-top:19px}.comparison{margin-top:35px}.comparison h2{font-size:20px;letter-spacing:-.5px;margin-bottom:12px}.table-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:white}table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:13px}th{text-align:left;background:#edf2fa;color:#576c86;font-size:12px;font-weight:650}th,td{padding:15px 17px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}tbody tr:last-child td{border-bottom:0}th:nth-child(1){width:16%}th:nth-child(2){width:32%}th:nth-child(3){width:16%}td strong{font-weight:650}.footer-note{margin:32px 0 0;border-top:1px solid var(--line);padding:20px 0 25px;display:flex;gap:30px;align-items:flex-start;justify-content:space-between;font-size:11px;color:#8793a4}.footer-note p{max-width:770px}.data-info{background:white;border:1px solid var(--line);border-radius:14px;padding:13px 17px;font-size:12px;color:var(--muted);margin-top:27px}.data-info summary{cursor:pointer;font-weight:600;color:#64768d}.data-info p{padding-top:10px}.data-info ul{padding-left:18px;margin:9px 0 0}.favorites-page{padding-top:40px;min-height:60vh}.favorites-page .results-head{margin-bottom:25px}.empty{text-align:center;padding:48px 22px;border:1px dashed #d5deeb;background:#ffffffa8;border-radius:19px}.empty-icon{display:grid;place-items:center;width:62px;height:62px;background:var(--pale);border-radius:20px;color:#7a94c5;margin:0 auto 17px}.empty-icon svg{width:28px;height:28px}.empty h3{font-size:18px;margin-bottom:8px}.empty p{font-size:13px;color:var(--muted);max-width:490px;margin:0 auto}.empty .outline-btn{margin-top:19px}dialog{padding:0;border:1px solid var(--line);border-radius:23px;width:min(610px,calc(100% - 32px));max-height:calc(100dvh - 40px);color:var(--ink);box-shadow:0 24px 85px #23334c30;background:white}dialog::backdrop{background:#24344e6b;backdrop-filter:blur(4px)}.dialog-head{padding:23px 25px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:17px;position:sticky;top:0;background:white;z-index:2}.dialog-head h2{font-size:21px;line-height:1.5}.close-button{flex-shrink:0;width:33px;height:33px;border-radius:9px;background:#f1f4f8;font-size:23px;line-height:1}.dialog-body{padding:21px 25px 27px}.detail-section{margin-bottom:21px}.detail-section h3{font-size:13px;color:#6b7c91;margin-bottom:8px}.detail-section p{font-size:14px}.detail-section .coverage-list{margin-bottom:0}.detail-grid{display:grid;grid-template-columns:112px 1fr;gap:10px 16px;font-size:13px}.detail-grid dt{color:var(--muted)}.detail-grid dd{margin:0;min-width:0}.source-url{font-size:11px;word-break:break-all;background:#f6f8fb;padding:10px;border-radius:8px}.disclaimer{font-size:12px;background:#fff6e9;color:#846849;padding:13px;border-radius:11px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:11px 18px;color:white;background:#34465d;box-shadow:0 7px 25px #23334c30;border-radius:12px;font-size:13px;z-index:10;max-width:calc(100% - 32px)}.print-only{display:none}.action-row{display:flex;gap:8px;flex-wrap:wrap}.reset-body{padding:23px 25px}.reset-body p{font-size:14px;color:var(--muted);margin-bottom:20px}.reset-body .action-row{justify-content:flex-end}.mini-banner{font-size:12px;display:flex;gap:7px;align-items:center;color:#8190a3;justify-content:center;margin-top:15px}.mini-banner svg{width:14px;height:14px}
+@media(min-width:900px){.result-cards>.product-card:last-child:nth-child(odd){grid-column:1 / -1}.result-cards>.product-card:last-child:nth-child(odd) .reason{max-width:100%}}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}header{height:75px}.brand{font-size:18px;gap:8px}.brand-symbol{width:34px;height:37px;border-radius:11px}.brand small{font-size:9px}.nav button{padding:7px 10px;font-size:12px;gap:5px}.nav svg{width:16px;height:16px}.hero{padding:33px 0 23px}h1{font-size:31px;letter-spacing:-1.3px}.intro{font-size:13px}.search-panel{padding:20px}.guide-grid{grid-template-columns:1fr}.guide-card{padding:17px 20px}.guide{padding-top:30px}.guide-card p{font-size:12px}.results-head h2{font-size:21px}.result-cards{grid-template-columns:1fr}.product-card{padding:20px}.results-head{align-items:flex-start}.comparison thead{display:none}.comparison table,.comparison tbody{display:block}.comparison tr{display:block;border-bottom:1px solid var(--line);padding:14px 17px}.comparison tr:last-child{border:0}.comparison td{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;width:100%;border:0;padding:6px 0;font-size:12px}.comparison td::before{content:attr(data-label);color:var(--muted);font-size:11px}.footer-note{gap:15px;flex-direction:column}.recent{gap:7px}.recent-title{font-size:11px}.mini-banner{font-size:11px}.data-info{font-size:11px}}
+@media(max-width:420px){.wrap{width:calc(100% - 24px)}.header-inner{gap:8px}.nav{padding:4px}.nav button{padding:7px 8px}.nav button svg{display:none}.brand{font-size:16px}.hero{padding-top:27px}h1{font-size:28px}.search-panel{padding:17px 15px}.search-row{gap:8px;flex-wrap:wrap}.input-wrap{flex-basis:100%;padding:11px 12px}.primary.search-submit{width:100%;padding:11px}.suggestions{gap:5px}.search-top label{font-size:13px}.results-head{flex-wrap:wrap}.dialog-head,.dialog-body{padding-left:18px;padding-right:18px}.detail-grid{grid-template-columns:90px 1fr;gap:9px}.guide-card{padding:17px 15px}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .16s,color .16s}.product-card{animation:rise .25s ease-out}@keyframes rise{from{transform:translateY(5px);opacity:.6}to{transform:none;opacity:1}}}
+@media print{@page{size:A4;margin:14mm}body{background:white;font-size:11px;color:#172433}header,.hero,.search-panel,.recent,.guide,.data-info,.footer-note,.no-print,.mini-banner,.favorite-btn,.detail-button,.more-wrap,.result-note,dialog,.toast,.favorites-page{display:none!important}.wrap{width:100%;max-width:none}.results{display:block!important;margin-top:0}.results-head{margin-bottom:12px}.results-head h2{font-size:21px}.results-head p{font-size:11px}.print-only{display:block;font-size:10px;color:#69798f;margin-bottom:12px}.result-cards{display:block}.product-card{display:block;break-inside:avoid;padding:13px 16px;margin-bottom:10px;border:1px solid #ced7e6;box-shadow:none!important;animation:none}.card-top{margin-bottom:4px}.product-card h3{font-size:15px;margin-bottom:7px}.coverage-list{margin-bottom:7px}.reason{padding:6px 9px;margin-bottom:6px}.card-foot{font-size:10px}.comparison{margin-top:20px}.comparison table{display:table;font-size:10px}.comparison thead{display:table-header-group}.comparison tbody{display:table-row-group}.comparison tr{display:table-row}.comparison td,.comparison th{display:table-cell;padding:9px;border-bottom:1px solid var(--line);font-size:10px}.comparison td::before{display:none}.comparison tr{break-inside:avoid}.stale{background:white;border-color:#ccb872;color:#765a20}.query-summary{margin-bottom:12px}}
+
+button{touch-action:manipulation}
+@media(max-width:600px){.search-row{flex-wrap:wrap}.input-wrap{flex-basis:100%}#addTokenButton,.primary.search-submit{flex:1;width:auto;min-height:48px}.suggestions button,.chip button,.favorite-btn,.close-button,.detail-button,.nav button{min-height:44px;min-width:44px}.results-head{flex-wrap:wrap}#exportHelp{flex-basis:100%}}
+</style>
+</head>
+<body><p id="runtimeNotice" role="status" style="padding:12px;background:#fff3df">버튼 준비 중입니다. 이 안내가 계속 보이면 파일 미리보기에서 실행이 제한되었을 수 있습니다. 웹페이지를 Safari 또는 Chrome에서 열어 주세요.</p>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+<symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4V4Z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M11 4v16"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M6 17H3v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7h-3M7 14h10v7H7zM17 11h1"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m10 3 2.5 6.5L19 12l-6.5 2.5L10 21l-2.5-6.5L1 12l6.5-2.5L10 3ZM19 2v6M16 5h6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+</defs></svg>
+<header><div class="wrap header-inner"><button class="brand" id="homeButton" aria-label="보험추천 첫 화면"><span class="brand-symbol"><svg><use href="#i-shield"/></svg></span><span>보험추천<small>MY INSURANCE FINDER</small></span></button><nav class="nav" aria-label="주 메뉴"><button id="searchTab" class="active" aria-current="page"><svg><use href="#i-search"/></svg>보험 찾기</button><button id="favoritesTab"><svg><use href="#i-bookmark"/></svg>즐겨찾기 <span id="favoriteCount" class="counter">0</span></button></nav></div></header>
+<main class="wrap">
+<div id="searchPage">
+<section class="hero"><div class="eyebrow"><i></i>10개 보험사 · 50개 상품 수록</div><h1>궁금한 보장,<br><em>단어로 찾아보세요.</em></h1><p class="intro">관심 있는 단어를 모으면, 관련 보험을 한눈에 비교할 수 있어요.</p></section>
+<form id="searchForm" class="search-panel" novalidate><div class="search-top"><label for="queryInput">어떤 보장이 궁금하세요?</label><span class="limit" id="keywordCount">검색어 0 / 5</span></div><div class="search-row"><div class="input-wrap"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="queryInput" autocomplete="off" maxlength="150" placeholder="예: 암, 뇌, 심장" aria-describedby="inputHelp inputMessage"></div><button type="button" id="addTokenButton" class="outline-btn">＋ 단어 추가</button><button type="button" id="searchButton" class="primary search-submit">검색하기</button></div><div id="chips" class="chips" aria-label="등록한 검색어"></div><p id="inputHelp" class="hint">단어 입력 후 ＋ 단어 추가를 눌러 주세요. 최대 5개 · ×를 누르면 삭제할 수 있어요.</p><p id="inputMessage" class="input-message" role="status" aria-live="polite"></p><div class="suggestions"><span>이렇게 시작해 보세요</span><button type="button" data-example="암">암</button><button type="button" data-example="뇌,심장">뇌 · 심장</button><button type="button" data-example="치아">치아</button><button type="button" data-example="어린이">어린이</button><button type="button" data-example="간병">간병</button></div></form>
+<div class="recent"><span class="recent-title">최근 검색</span><div id="recentList" class="recent-list"><span style="padding-top:4px;color:#9aa5b4">아직 검색 기록이 없어요.</span></div><button id="clearHistory" type="button" class="text-button" hidden>기록 지우기</button></div>
+<section id="guide" class="guide"><p class="section-caption">HOW IT WORKS</p><div class="guide-grid"><article class="guide-card"><span class="guide-icon"><svg><use href="#i-search"/></svg></span><div><h3>01. 단어로 시작해요</h3><p>보장이나 가입대상을 입력하고<br>검색어를 5개까지 모아 보세요.</p></div></article><article class="guide-card"><span class="guide-icon"><svg><use href="#i-grid"/></svg></span><div><h3>02. 한눈에 비교해요</h3><p>관련 상품 최대 5개를 찾아<br>보장과 추천 이유를 보여드려요.</p></div></article><article class="guide-card"><span class="guide-icon"><svg><use href="#i-bookmark"/></svg></span><div><h3>03. 마음에 드는 상품을 담아요</h3><p>즐겨찾기로 따로 모아두고<br>검색 결과는 PDF로 보관하세요.</p></div></article></div><div class="mini-banner"><svg><use href="#i-shield"/></svg>로그인 없이, 인터넷 연결 없이 사용할 수 있어요.</div></section>
+<section id="results" class="results" hidden aria-label="검색 결과"><div id="stale" class="stale" hidden><strong>이전 검색 결과</strong><span>검색어가 바뀌었어요. 검색하기를 눌러 결과를 새로 확인해 주세요.</span></div><div class="results-head"><div><h2 id="resultTitle" tabindex="-1">관련 보험을 찾았어요</h2><p id="resultSubtitle"></p></div><button id="printButton" class="outline-btn no-print"><svg><use href="#i-print"/></svg>인쇄</button><button type="button" id="imageButton" class="outline-btn no-print">이미지 저장</button><p id="exportHelp" class="hint no-print" role="status"></p></div><section id="imagePreview" class="no-print" hidden aria-label="저장할 검색 결과 이미지" style="padding:18px;background:white;border:1px solid #d8e0ef;border-radius:16px;margin-bottom:20px"></section><div class="print-only">첨부 DB 기준: 2026-11-11 · 공식 상품목록 확인 기록 · 약관 미검토. 가입 승인·보장 적합성·보험금 지급을 보증하지 않습니다.</div><div id="querySummary" class="query-summary"></div><div id="resultCards" class="result-cards"></div><div id="noResults" class="empty" hidden><div class="empty-icon"><svg><use href="#i-search"/></svg></div><h3>조건에 맞는 상품을 찾지 못했어요</h3><p id="noResultsText"></p><button class="outline-btn" id="editSearch">검색어 수정하기</button></div><div id="resultNote" class="result-note"></div><div class="more-wrap"><button id="loadMore" class="outline-btn" hidden>5개 더 보기</button></div><section id="comparison" class="comparison" hidden><h2>상품 한눈에 비교하기</h2><div class="table-wrap"><table><caption class="print-only">현재 표시된 상품 비교</caption><thead><tr><th scope="col">보험회사</th><th scope="col">상품명</th><th scope="col">보험 종류</th><th scope="col">주요 보장</th></tr></thead><tbody id="compareBody"></tbody></table></div></section></section>
+</div>
+<section id="favoritesPage" class="favorites-page" hidden><div class="results-head"><div><h2 class="favorites-title" tabindex="-1">내가 담은 보험</h2><p>마음에 드는 상품을 모아 자세히 살펴보세요.</p></div><button id="clearFavorites" class="outline-btn" hidden>즐겨찾기 비우기</button></div><div id="favoriteCards" class="result-cards"></div><div id="emptyFavorites" class="empty"><div class="empty-icon"><svg><use href="#i-bookmark"/></svg></div><h3>관심 있는 보험을 담아보세요</h3><p>검색 결과의 책갈피 버튼을 누르면 이곳에 모여요.<br>즐겨찾기는 현재 파일을 사용하는 동안만 유지됩니다.</p><button id="backToSearch" class="outline-btn">보험 찾아보기 <svg><use href="#i-arrow"/></svg></button></div></section>
+<details class="data-info"><summary>상품정보와 검색 기준을 확인해 주세요</summary><p>첨부된 50개 상품 DB의 공식 상품목록·대표 보장 확인 기록(2026-11-11)을 사용합니다. 상품별 상세보기에서 출처 주소와 당시 판매 확인 상태를 볼 수 있습니다. 약관은 검토되지 않았으며, 정확한 연령과 특약은 대부분 미확인입니다. 상품명 중 일부는 상품군·플랜 표시명입니다.</p><ul><li>상품명·주요 보장명만 검색합니다. 상세 설명의 단어는 추천 점수에 넣지 않습니다. 직접 관련 상품을 우선하고, 관련 보장 분류의 유사상품을 따로 표시합니다.</li><li>어린이·태아·여성·남성·운전자·오토바이·강아지·고양이·유병자·성인, 나이(예: 10세·30대)는 가입대상 필터입니다. 확인된 조건이 모두 일치하는 상품만 보여줍니다. ‘운전’은 보장 검색어입니다.</li><li>나이의 정확한 범위가 수록된 상품은 ‘굿앤굿어린이종합보험Q(0~15세)’입니다. 다른 상품은 연령 조건 검색에서 제외됩니다. 30대는 30~39세 전체 구간을 기준으로 확인합니다.</li><li>조건만 검색하면 가나다순 전체 목록을 5개씩 보여줍니다. 관심 보장이 있으면 같은 보험사 최대 2개, 전체 최대 5개를 선정합니다. 가입조건 미확인 상품은 조건 없는 검색에서 후순위로 포함할 수 있습니다.</li><li>내부 점수: 검색어 일치 비율 40 · 주요 보장 일치 20 · 전체 검색어 일치 10 · 관련 보장항목 수 15 · 관련 보장 종류 다양성 15. 보장항목 수·다양성은 전체 DB의 최대값으로 환산합니다. 점수는 표시하지 않습니다.</li><li>보장의 같은 목적·지급조건 표현은 중복 계산하지 않습니다. 확인된 주요 보장만 사용하며 미확인 특약은 검색·계산하지 않습니다. 원문에 지급조건이 없으면 별도 보장으로 가정하지 않습니다.</li><li>보험료·실제 가입 가능 여부·최신 판매 상태는 조회하지 않습니다. 외부 연결과 자동 갱신이 없습니다. 검색 기록·즐겨찾기는 새로고침하거나 파일을 다시 열면 초기화됩니다.</li></ul></details>
+<footer class="footer-note"><p>이 도구는 관심 보장에 따른 상품 탐색을 돕습니다. 실제 가입 가능 여부와 보장 범위는 상품의 선택 유형·특약·인수심사에 따라 달라집니다.</p><button id="resetAll" class="text-button">사용 중 기록 초기화</button></footer>
+</main>
+<dialog id="detailDialog" aria-labelledby="detailTitle"><div class="dialog-head"><div><p class="insurer" id="detailInsurer"></p><h2 id="detailTitle"></h2></div><button class="close-button" id="closeDetail" aria-label="상세보기 닫기">×</button></div><div id="detailBody" class="dialog-body"></div></dialog>
+<dialog id="resetDialog" aria-labelledby="resetTitle"><div class="dialog-head"><h2 id="resetTitle">사용 중 기록 초기화</h2><button class="close-button" id="cancelResetX" aria-label="초기화 취소">×</button></div><div class="reset-body"><p id="resetMessage"></p><div class="action-row"><button id="cancelReset" class="outline-btn">취소</button><button id="confirmReset" class="primary">초기화</button></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script>
+/* 보험추천 상품 DB v2 — 2026-11-11 공식 상품안내 기준 50개
+ * 검증 범위: 보험사 공식 상품목록/상품안내에 나타난 상품 또는 상품 플랜의
+ * 명칭·분야·대표 보장. 사용자 요청에 따라 약관 대조는 하지 않음.
+ * 주의: 상품목록의 게시·계산 가능 상태는 개별 청약 승인이나 가입연령 확정이 아님.
+ * 일부 상품은 공식 페이지의 '상품군/플랜' 명칭이며 정식 계약명과 다를 수 있음.
+ * 알려지지 않은 연령·성별·특약은 채우지 않음. 보험료나 지급 확정 판단 금지.
+ */
+const INSURANCE_DB_V2 = (() => {
+  // 행: 공식 표시명 | 보험종류 | 공식 안내의 대표 보장 분야 | 가입대상/조건(확인 범위)
+  const groups = [
+    ['삼성화재','https://www.samsungfire.com/m/submain_product.html',[
+      ['다이렉트 AI맞춤보장보험','건강/상해','건강,상해,생활위험','개인 심사 및 선택 보장에 따름'],
+      ['다이렉트 실손의료비보험','실손','입원,통원,실손의료비','계약 유형에 따른 심사'],
+      ['다이렉트 오토바이 운전자보험','운전자','오토바이,교통사고,운전자','이륜차 운전자 관련'],
+      ['자녀보험 꿈나무','어린이','자녀,질병,상해','자녀 가입 대상'],
+      ['운전자보험 안전운전 파트너 플러스','운전자','운전자,교통사고,형사비용','운전 유형 및 인수 심사']]],
+    ['현대해상','https://mdirect.hi.co.kr/service.do?m=074b8f3cf5',[
+      ['굿앤굿어린이종합보험Q(태아)','태아/어린이','태아,신생아,질병','태아 가입 대상'],
+      ['굿앤굿어린이종합보험Q(0~15세)','어린이','어린이,질병,상해','0~15세 안내'],
+      ['퍼펙트건강보험','건강','암,뇌,심장,질병','성인 등 인수 심사'],
+      ['운전자보험','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사'],
+      ['굿앤굿우리펫보험(강아지)','펫','강아지,동물의료비,질병','반려견 가입 대상']]],
+    ['DB손해보험','https://idongbu.co.kr/FMMALV5700.do',[
+      ['참좋은운전자상해보험','운전자','운전자,상해,교통사고','운전 유형 및 인수 심사'],
+      ['아이(I)러브(LOVE)플러스건강보험','어린이/건강','어린이,질병,상해','자녀/건강 가입 대상'],
+      ['참좋은더보장간병보험','간병','간병,장기요양','개별 인수 심사'],
+      ["New I'mOK암보험",'암','암,진단,치료','개별 인수 심사'],
+      ['펫블리 반려묘보험','펫','고양이,동물의료비,질병','반려묘 가입 대상']]],
+    ['KB손해보험','https://www.kbinsure.co.kr/CU400000001.ec?category=insurance',[
+      ['KB 9회주는 암보험Plus','암','암,진단,치료','선택 유형·심사에 따름'],
+      ['KB 금쪽같은 자녀보험Plus','어린이','어린이,질병,상해','자녀 가입 대상'],
+      ['KB 골든라이프케어 간병보험','간병','간병,장기요양','개별 인수 심사'],
+      ['KB The건강한 치아보험','치아','치아,보존치료,보철치료','개별 인수 심사'],
+      ['KB 플러스 운전자상해보험','운전자','운전자,상해,교통사고','운전 유형 및 인수 심사']]],
+    ['메리츠화재','https://www.meritzdirect.com/main.do',[
+      ['올바른 100세건강보험','건강','암,뇌혈관,심장','개별 인수 심사'],
+      ['올케어 보장 꽉 채운 암보험','암','암,진단,치료','개별 인수 심사'],
+      ['올케어 꽉 채운 치아보험','치아','보존치료,보철치료,치아','개별 인수 심사'],
+      ['내Mom같은 어린이보험','어린이','어린이,암,뇌혈관,심장','자녀 가입 대상'],
+      ['메리츠 운전자 상해종합보험','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사']]],
+    ['롯데손해보험','https://online.lotteins.co.kr/web/C/C/store/main.jsp',[
+      ['let:smile 종합건강보험(더끌림 포맨/포우먼)','건강','질병,건강,암','남녀 플랜 구분·심사'],
+      ['let:care 종합암보험(88플러스원)','암','암,진단,치료','개별 인수 심사'],
+      ['let:care 간병보험Ⅱ','간병','간병,치매,장기요양','개별 인수 심사'],
+      ['let:play 자녀보험(도담도담)','어린이','어린이,질병,상해','자녀 가입 대상'],
+      ['운전자보험','운전자','운전자,교통사고','운전 유형 및 인수 심사']]],
+    ['흥국화재','https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do',[
+      ['흥Good Next 더플러스 종합보험(26.09)','건강','암,뇌졸중,심근경색','개별 인수 심사'],
+      ['흥Good 이튼튼한 치아보험(26.01)','치아','치아,치과치료','개별 인수 심사'],
+      ['흥Good 뉴키즈 자녀보험(26.05)','어린이','어린이,질병,상해','자녀 가입 대상'],
+      ['흥Good 든든한 SMILE 운전자 종합보험(26.05)','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사'],
+      ['흥Good 다이렉트 3.5.5 간편건강보험(26.04)','간편건강','유병자,질병,건강','간편고지 유형 구분']]],
+    ['한화손해보험','https://www.hanwhadirect.com/',[
+      ['한화 시그니처 여성 건강보험 4.0(무)','여성/건강','여성암,여성질환,건강','여성 대상·심사'],
+      ['다이렉트 3200운전자보험','운전자','운전자,교통사고','운전 유형 및 인수 심사'],
+      ['다이렉트 내가고른 암보험','암','암,진단,항암치료','개별 인수 심사'],
+      ['한화 운전자상해보험(무)','운전자/상해','운전자,상해,교통사고','운전 유형 및 인수 심사'],
+      ['한화 건강쑥쑥어린이보험(무)','어린이','어린이,질병,상해','자녀 가입 대상']]],
+    ['한화생명','https://direct.hanwhalife.com/app/products/2',[
+      ['한화생명 H건강플러스보험(무)','건강','암,뇌혈관,심장','개별 인수 심사'],
+      ['한화생명 시그니처H암보험(무)','암','암,항암,치료','개별 인수 심사'],
+      ['한화생명 e건강보험(무)(암·뇌·심장)','건강','암,뇌,심장','다이렉트 가입 심사'],
+      ['한화생명 하나로H종신보험(무)','종신','사망,종신','개별 인수 심사'],
+      ['한화생명 e암보험(비갱신형)(무)','암','암,진단','다이렉트 가입 심사']]],
+    ['삼성생명','https://direct.samsunglife.com/',[
+      ['삼성생명 다이렉트 암(갱신)보험','암','암,진단,갱신','다이렉트 가입 심사'],
+      ['삼성생명 다이렉트 암(비갱신)보험','암','암,진단,비갱신','다이렉트 가입 심사'],
+      ['삼성생명 다이렉트 암치료보험','암','암,치료,항암','다이렉트 가입 심사'],
+      ['삼성생명 다이렉트 팩 건강보험(종합팩)','건강','암,뇌,심장,종합','다이렉트 가입 심사'],
+      ['삼성생명 다이렉트 치아보험','치아','치아,치과치료','다이렉트 가입 심사']]]
+  ];
+  return groups.flatMap(([insurer,url,items],g)=>items.map(([productName,insuranceType,coverage,conditions],i)=>({
+    id:`VERIFY-${String(g*5+i+1).padStart(3,'0')}`,
+    insurer, productName, insuranceType,
+    mainCoverages:coverage.split(','),
+    eligibilitySummary:conditions,
+    ageMin:null, ageMax:null,
+    sourceUrl:url, sourceKind:'보험사 공식 상품목록/상품안내',
+    checkedAt:'2026-11-11',
+    validationLevel:'official_listing_checked',
+    validationScope:'공식 사이트 상품 표시명과 대표 분야. 약관 미검토',
+    onSaleStatus:'공식 판매·상품안내 페이지 노출 (개별 청약 가능 여부 별도)',
+    recommendationEligible:true,
+    caveat:'표시된 보장은 선택특약·유형에 따라 달라질 수 있으며 정확한 가입연령·심사 결과는 별도 확인',
+  })));
+})();
+
+</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icon=name=>`<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const norm=s=>String(s).normalize('NFKC').toLocaleLowerCase('ko').replace(/[\s·ㆍ_()\[\]–—-]/g,'');
+const unique=a=>[...new Set(a)];
+const state={tokens:[],history:[],favorites:new Set(),result:null,shown:5,view:'search'};
+// Structured target information is derived only from explicit labels in the supplied DB.
+const PRODUCTS=INSURANCE_DB_V2.map(p=>{
+ const text=p.insuranceType+' '+p.eligibilitySummary;const targets=[];
+ if(/자녀|어린이/.test(text)&&!p.productName.includes('(태아)'))targets.push('child');
+ if(/태아/.test(p.eligibilitySummary))targets.push('fetus');
+ if(/반려견/.test(p.eligibilitySummary))targets.push('dog');
+ if(/반려묘/.test(p.eligibilitySummary))targets.push('cat');
+ if(/운전/.test(text))targets.push('driver');
+ if(/이륜차/.test(p.eligibilitySummary))targets.push('motorcycle');
+ if(/간편고지/.test(p.eligibilitySummary))targets.push('simplified');
+ if(/성인/.test(p.eligibilitySummary))targets.push('adult');
+ const genders=/남녀/.test(p.eligibilitySummary)?['female','male']:/여성 대상/.test(p.eligibilitySummary)?['female']:[];
+ const knownAge=/0~15세/.test(p.eligibilitySummary)?[0,15]:null;
+ return {...p,targets,genders,knownAge,conditionsKnown:!!knownAge};
+}).filter(p=>p.recommendationEligible&&p.validationLevel==='official_listing_checked'&&p.onSaleStatus&&p.sourceUrl&&p.mainCoverages.length);
+const CONDITION_TERMS={어린이:['target','child','어린이·자녀'],자녀:['target','child','어린이·자녀'],아이:['target','child','어린이·자녀'],아동:['target','child','어린이·자녀'],태아:['target','fetus','태아'],임산부:['target','fetus','태아 가입'],강아지:['target','dog','반려견'],반려견:['target','dog','반려견'],고양이:['target','cat','반려묘'],반려묘:['target','cat','반려묘'],여성:['gender','female','여성'],여자:['gender','female','여성'],남성:['gender','male','남성'],남자:['gender','male','남성'],운전자:['target','driver','운전자'],오토바이:['target','motorcycle','이륜차 운전자'],이륜차:['target','motorcycle','이륜차 운전자'],유병자:['target','simplified','간편고지'],간편가입:['target','simplified','간편고지'],간편고지:['target','simplified','간편고지'],성인:['target','adult','성인']};
+function parseCondition(raw){
+ const t=norm(raw).replace(/^만/,'');const c=CONDITION_TERMS[t];if(c)return{raw,kind:c[0],value:c[1],label:c[2]};
+ let m=t.match(/^(\d{1,3})(?:세|살)$/);if(m)return{raw,kind:'age',min:+m[1],max:+m[1],label:raw};
+ m=t.match(/^(\d{1,2})대$/);if(m&&+m[1]%10===0)return{raw,kind:'age',min:+m[1],max:+m[1]+9,label:raw};
+ m=t.match(/^(\d{1,3})[~〜](\d{1,3})세$/);if(m)return{raw,kind:'age',min:+m[1],max:+m[2],label:raw};
+ m=t.match(/^(\d{1,3})세(이상|이하|미만|초과)$/);if(m){const n=+m[1];return{raw,kind:'age',min:m[2]==='이상'?n:m[2]==='초과'?n+1:0,max:m[2]==='이하'?n:m[2]==='미만'?n-1:150,label:raw};}
+ return null;
+}
+const SYNONYMS=[['암','암보험'],['뇌','뇌질환','뇌질병'],['심장','심장질환','심장질병'],['치아','치과','치아보험','치과치료'],['간병','간병보험'],['운전','운전보험','운전자보험','운전자'],['실손','실비','실손보험','실비보험','실손의료비'],['펫','펫보험','반려동물','동물의료비'],['건강','건강보험'],['어린이','어린이보험','자녀보험','자녀'],['사망','사망보험','종신','종신보험']];
+function variants(t){const n=norm(t);return unique([n,...(SYNONYMS.find(group=>group.map(norm).includes(n))||[]).map(norm)]);}
+function matches(text,term){const n=norm(text);return variants(term).some(v=>n.includes(v));}
+function coverageClass(text){
+ const n=norm(text);
+ if(/여성암|암|항암/.test(n))return'암';if(/뇌/.test(n))return'뇌';if(/심장|심근경색/.test(n))return'심장';
+ if(/치아|치과|보존치료|보철치료/.test(n))return'치아';if(/간병|치매|장기요양/.test(n))return'간병';
+ if(/운전|교통|오토바이|형사비용/.test(n))return'운전';if(/고양이|강아지|동물|펫/.test(n))return'펫';
+ if(/실손|실비/.test(n))return'실손';if(/입원|통원/.test(n))return'의료';if(/태아|신생아|어린이|자녀/.test(n))return'자녀';
+ if(/여성질환/.test(n))return'여성';if(/상해|생활위험/.test(n))return'상해';if(/사망|종신/.test(n))return'사망';
+ if(/건강|질병|종합|유병자/.test(n))return'건강';return'기타';
+}
+// Related classifications are for discovery only, never assertions of an unlisted benefit.
+const NEIGHBORS={암:['건강'],뇌:['건강'],심장:['건강'],건강:['암','뇌','심장','상해','실손'],실손:['의료','건강'],의료:['실손','건강'],운전:['상해'],상해:['운전','건강'],간병:[],치아:[],펫:[],자녀:[],여성:['건강'],사망:[]};
+function canonicalCoverage(c){const n=norm(c);return ({치과치료:'치아',건강:'질병',종합:'질병',종신:'사망',뇌혈관:'뇌',뇌졸중:'뇌졸중',심근경색:'심근경색'})[n]||n;}
+const coverageUnits=p=>unique(p.mainCoverages.map(canonicalCoverage));
+const MAX_COVERAGES=Math.max(1,...PRODUCTS.map(p=>coverageUnits(p).length));
+const MAX_DIVERSITY=Math.max(1,...PRODUCTS.map(p=>unique(p.mainCoverages.map(coverageClass)).length));
+function passes(p,conditions){return conditions.every(c=>c.kind==='age'?!!p.knownAge&&c.min<=c.max&&c.min>=p.knownAge[0]&&c.max<=p.knownAge[1]:c.kind==='gender'?p.genders.includes(c.value):p.targets.includes(c.value));}
+const alphabetical=(a,b)=>a.insurer.localeCompare(b.insurer,'ko')||a.productName.localeCompare(b.productName,'ko');
+function searchProducts(tokens){
+ const conditions=tokens.map(parseCondition).filter(Boolean),interests=tokens.filter(t=>!parseCondition(t));
+ const pool=PRODUCTS.filter(p=>passes(p,conditions));
+ if(!interests.length)return{mode:'conditions',tokens:[...tokens],conditions,interests,items:pool.sort(alphabetical).map(p=>({product:p,kind:'condition',reason:'입력한 가입대상이 공식 안내의 확인된 조건과 일치해요.'})),poolCount:pool.length};
+ const scored=[];
+ for(const p of pool){
+  const coverTerms=interests.filter(t=>p.mainCoverages.some(c=>matches(c,t)));
+  const nameTerms=interests.filter(t=>matches(p.productName,t));
+  const allTerms=unique([...coverTerms,...nameTerms]);
+  const units=unique(p.mainCoverages.filter(c=>interests.some(t=>matches(c,t))).map(canonicalCoverage));
+  const diversity=unique(p.mainCoverages.filter(c=>interests.some(t=>matches(c,t))).map(coverageClass)).length;
+  const queryClasses=unique(interests.map(t=>coverageClass(variants(t)[0])).filter(c=>c!=='기타'));
+  const pClasses=unique(p.mainCoverages.map(coverageClass));
+  const sameClass=queryClasses.some(q=>pClasses.includes(q));
+  const nearby=queryClasses.some(q=>(NEIGHBORS[q]||[]).some(c=>pClasses.includes(c)));
+  if(!allTerms.length&&!sameClass&&!nearby)continue;
+  // Main-coverage matches precede name-only matches, then related classifications.
+  const tier=coverTerms.length?0:allTerms.length?1:2;
+  const score=40*allTerms.length/interests.length+20*coverTerms.length/interests.length+(allTerms.length===interests.length?10:0)+15*units.length/MAX_COVERAGES+15*diversity/MAX_DIVERSITY;
+  const kind=tier<2?'direct':'similar';
+  const reason=coverTerms.length?`주요 보장에서 ‘${coverTerms.join(' · ')}’ 관련 항목을 찾았어요.`:nameTerms.length?`상품명에 ‘${nameTerms.join(' · ')}’가 포함되어 있어요. 세부 보장을 확인해 주세요.`:`‘${queryClasses.join(' · ')}’와 관련된 보장 분류의 상품이에요. 검색어의 직접 보장은 확인되지 않았어요.`;
+  scored.push({product:p,kind,reason,score,tier,coverageMatch:units.length,diversity,sameClass});
+ }
+ scored.sort((a,b)=>a.tier-b.tier||Number(b.product.conditionsKnown)-Number(a.product.conditionsKnown)||b.score-a.score||b.coverageMatch-a.coverageMatch||b.diversity-a.diversity||alphabetical(a.product,b.product));
+ const counts=new Map(),items=[];for(const item of scored){const insurer=item.product.insurer;if((counts.get(insurer)||0)>=2)continue;items.push(item);counts.set(insurer,(counts.get(insurer)||0)+1);if(items.length===5)break;}
+ return{mode:'recommendation',tokens:[...tokens],conditions,interests,items,poolCount:pool.length};
+}
+function message(text=''){$('inputMessage').textContent=text;}
+function toast(text){clearTimeout(toast.timer);$('toast').textContent=text;$('toast').hidden=false;toast.timer=setTimeout(()=>$('toast').hidden=true,2600);}
+function tokenize(text){return text.replace(/[,，、]/g,' ').split(/\s+/).map(t=>t.trim()).filter(Boolean);}
+function addTokens(text){
+ const incoming=tokenize(text);if(!incoming.length){message('검색어를 입력해 주세요.');return false;}
+ const seen=new Set(state.tokens.map(norm));let duplicates=false;const accepted=[];
+ for(const token of incoming){if(seen.has(norm(token))){duplicates=true;continue;}seen.add(norm(token));accepted.push(token);}
+ if(accepted.some(t=>t.length>30)){message('검색어 하나는 30자 이내로 입력해 주세요.');return false;}
+ if(state.tokens.length+accepted.length>5){message('검색어는 최대 5개까지 등록할 수 있어요. 기존 단어를 지우고 추가해 주세요.');return false;}
+ state.tokens.push(...accepted);$('queryInput').value='';renderChips();markStale();
+ message(duplicates?'중복된 검색어는 한 번만 등록해요.':accepted.length?'단어를 등록했어요. 검색하기를 눌러 결과를 확인하세요.':'');
+ return true;
+}
+function renderChips(){$('chips').innerHTML=state.tokens.map((t,i)=>`<span class="chip">${esc(t)}<button type="button" data-remove="${i}" aria-label="${esc(t)} 검색어 삭제">×</button></span>`).join('');$('keywordCount').textContent=`검색어 ${state.tokens.length} / 5`;}
+function markStale(){if(!state.result)return;const same=JSON.stringify(state.tokens)===JSON.stringify(state.result.tokens)&&!$('queryInput').value.trim();$('stale').hidden=same;}
+function runSearch(){
+ if($('queryInput').value.trim()){if(!addTokens($('queryInput').value))return;}
+ if(!state.tokens.length){message('검색어를 입력해 주세요.');$('queryInput').focus();return;}
+ message('');state.result=searchProducts(state.tokens);state.shown=5;
+ const key=JSON.stringify(state.tokens);state.history=[state.tokens.slice(),...state.history.filter(t=>JSON.stringify(t)!==key)].slice(0,6);
+ renderHistory();renderResults();$('resultTitle').focus({preventScroll:true});$('results').scrollIntoView({block:'start',behavior:'auto'});
+}
+function renderHistory(){$('recentList').innerHTML=state.history.length?state.history.map((terms,i)=>`<button type="button" data-history="${i}">${esc(terms.join(' · '))}</button>`).join(''):'<span style="padding-top:4px;color:#9aa5b4">아직 검색 기록이 없어요.</span>';$('clearHistory').hidden=!state.history.length;}
+function productCard(item,index,mode){
+ const p=item.product,saved=state.favorites.has(p.id),rank=mode==='recommendation'?`<span class="rank">${String(index+1).padStart(2,'0')}</span>`:'';
+ const label=mode==='favorites'?'즐겨찾기':item.kind==='condition'?'조건 일치':item.kind==='direct'?'직접 관련':'유사상품';
+ return `<article class="product-card ${mode==='recommendation'&&index===0?'first':''}" data-product="${p.id}"><div class="card-top"><div class="badge-group">${rank}<span class="badge ${item.kind==='similar'?'similar':item.kind==='condition'?'condition':''}">${label}</span></div><button class="favorite-btn ${saved?'selected':''}" type="button" data-favorite="${p.id}" aria-pressed="${saved}" aria-label="${esc(p.productName)} 즐겨찾기 ${saved?'해제':'추가'}">${icon('bookmark')}</button></div><p class="insurer">${esc(p.insurer)}</p><h3>${esc(p.productName)}</h3><div class="coverage-list">${p.mainCoverages.map(c=>`<span>${esc(c)}</span>`).join('')}</div><p class="reason">${esc(item.reason||'관심 상품으로 담아두었어요. 주요 보장과 가입조건을 확인해 보세요.')}</p><div class="card-foot"><p class="verified">DB 검증일 ${esc(p.checkedAt)}<br>당시 공식 상품안내에 표시 · 현재 판매 미조회</p><button class="detail-button" data-detail="${p.id}">상세보기 ${icon('arrow')}</button></div></article>`;
+}
+function renderResults(){
+ const r=state.result;if(!r){$('results').hidden=true;$('guide').hidden=false;return;}
+ $('results').hidden=false;$('guide').hidden=true;const shown=r.items.slice(0,state.shown);
+ $('resultTitle').textContent=r.mode==='conditions'?`가입대상이 일치하는 상품 ${r.items.length}개`:`관심 보장과 관련된 보험 ${r.items.length}개`;
+ $('resultSubtitle').textContent=r.mode==='conditions'?`보험회사명·상품명 가나다순 · 전체 ${r.items.length}개 중 ${shown.length}개 표시 · 순위 없음`:'보장 관련성 기준 · 같은 보험사 최대 2개 · 전체 최대 5개';
+ $('querySummary').innerHTML=r.tokens.map(t=>`<span class="tag ${parseCondition(t)?'condition':''}">${parseCondition(t)?'조건':'보장'} · ${esc(t)}</span>`).join('');
+ $('resultCards').innerHTML=shown.map((item,i)=>productCard(item,i,r.mode)).join('');
+ $('noResults').hidden=!!r.items.length;$('resultCards').hidden=!r.items.length;
+ $('noResultsText').textContent=r.conditions.length?'입력한 조건을 모두 확인할 수 있는 관련 상품이 없어요. 연령·성별 등 조건이 미확인인 상품은 제외했습니다. 검색어를 바꾸어 다시 확인해 주세요.':'상품명과 주요 보장에서 관련 항목을 찾지 못했어요. ‘암’, ‘치아’, ‘간병’처럼 보장 이름으로 다시 검색해 주세요.';
+ $('resultNote').textContent=r.mode==='conditions'?'입력한 가입대상과의 일치만 확인했습니다. 개인별 가입 승인을 의미하지 않아요. 보장 단어를 추가하면 최대 5개 추천으로 전환됩니다.':r.items.length<5?`확인된 관련 후보가 ${r.items.length}개라 찾은 수만 표시했어요. 검색어를 바꾸거나 조건을 확인해 주세요.`:'대표 보장에 따른 탐색 결과입니다. 가입조건 미확인 상품도 포함될 수 있으니 상세보기를 확인해 주세요.';
+ if(r.mode==='recommendation'&&r.conditions.length&&r.items.length===5)$('resultNote').textContent='입력한 조건은 모두 일치하지만, 나머지 가입조건과 실제 가입 가능 여부는 별도 확인이 필요합니다.';
+ $('loadMore').hidden=r.mode!=='conditions'||state.shown>=r.items.length;
+ $('loadMore').textContent=`${Math.min(5,r.items.length-shown.length)}개 더 보기 (${shown.length}/${r.items.length})`;
+ $('printButton').disabled=false;$('comparison').hidden=!r.items.length;
+ $('compareBody').innerHTML=shown.map(({product:p})=>`<tr><td data-label="보험회사">${esc(p.insurer)}</td><td data-label="상품명"><strong>${esc(p.productName)}</strong></td><td data-label="보험 종류">${esc(p.insuranceType)}</td><td data-label="주요 보장">${esc(p.mainCoverages.join(' · '))}</td></tr>`).join('');markStale();
+}
+function renderFavorites(){
+ $('favoriteCount').textContent=state.favorites.size;const items=PRODUCTS.filter(p=>state.favorites.has(p.id));
+ $('favoriteCards').innerHTML=items.map((p,i)=>productCard({product:p},i,'favorites')).join('');$('emptyFavorites').hidden=!!items.length;$('clearFavorites').hidden=!items.length;
+}
+function setView(view){state.view=view;$('searchPage').hidden=view!=='search';$('favoritesPage').hidden=view!=='favorites';for(const [id,v] of [['searchTab','search'],['favoritesTab','favorites']]){$(id).classList.toggle('active',view===v);if(view===v)$(id).setAttribute('aria-current','page');else $(id).removeAttribute('aria-current');}if(view==='favorites')renderFavorites();window.scrollTo({top:0,behavior:'auto'});}
+function showDetail(id){
+ const p=PRODUCTS.find(p=>p.id===id);if(!p)return;$('detailInsurer').textContent=p.insurer+' · '+p.insuranceType;$('detailTitle').textContent=p.productName;
+ $('detailBody').innerHTML=`<section class="detail-section"><h3>공식 안내의 대표 보장</h3><div class="coverage-list">${p.mainCoverages.map(c=>`<span>${esc(c)}</span>`).join('')}</div></section><section class="detail-section"><h3>가입조건</h3><dl class="detail-grid"><dt>확인된 안내</dt><dd>${esc(p.eligibilitySummary)}</dd><dt>정확한 가입연령</dt><dd>${p.knownAge?`${p.knownAge[0]}~${p.knownAge[1]}세 (공식 안내 표기, 보험나이 기준 등 세부 확인 필요)`:'미확인 — 첨부 DB에 정확한 연령 범위가 없습니다.'}</dd><dt>성별 조건</dt><dd>${p.genders.length===2?'남녀 플랜 구분':p.genders.includes('female')?'여성 대상':'미확인 — 성별 제한 유무를 확인하지 않았습니다.'}</dd><dt>주요 특약</dt><dd>미확인 — 특약명·지급조건 자료가 없어 추천 계산에서 제외합니다.</dd></dl></section><section class="detail-section"><h3>상품정보의 확인 범위</h3><dl class="detail-grid"><dt>DB 검증일</dt><dd>${esc(p.checkedAt)}</dd><dt>검증 범위</dt><dd>${esc(p.validationScope)}</dd><dt>당시 판매 상태</dt><dd>${esc(p.onSaleStatus)}</dd><dt>현재 판매 상태</dt><dd>미조회 · 자동 갱신되지 않습니다.</dd></dl></section><section class="detail-section"><h3>공식 출처 주소 (텍스트 보관)</h3><p class="source-url">${esc(p.sourceUrl)}</p><p class="hint">외부 페이지를 열거나 연결하지 않습니다.</p></section><p class="disclaimer">${esc(p.caveat)}. 일부 표시명은 상품군·플랜 명칭입니다. 실제 가입 승인·보험료·보험금 지급 여부는 이 도구에서 판단하지 않습니다.</p>`;
+ $('detailDialog').showModal();$('detailDialog').scrollTop=0;
+}
+function confirmReset(kind){$('resetDialog').dataset.kind=kind;$('resetTitle').textContent=kind==='favorites'?'즐겨찾기 비우기':'사용 중 기록 초기화';$('resetMessage').textContent=kind==='favorites'?'담아둔 즐겨찾기를 모두 비웁니다. 현재 검색 결과는 유지됩니다.':'검색어, 검색 결과, 최근 검색, 즐겨찾기를 모두 초기화합니다. 내장된 보험상품 50개는 그대로 유지됩니다.';$('resetDialog').showModal();}
+$('searchForm').addEventListener('submit',e=>{e.preventDefault();runSearch();});
+$('queryInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing){e.preventDefault();addTokens(e.currentTarget.value);}});
+$('queryInput').addEventListener('input',()=>{message('');markStale();});
+$('chips').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;state.tokens.splice(+b.dataset.remove,1);renderChips();markStale();message('');$('queryInput').focus();});
+document.addEventListener('click',e=>{
+ const example=e.target.closest('[data-example]');if(example){addTokens(example.dataset.example);}
+ const recent=e.target.closest('[data-history]');if(recent){state.tokens=state.history[+recent.dataset.history].slice();$('queryInput').value='';renderChips();runSearch();}
+ const detail=e.target.closest('[data-detail]');if(detail)showDetail(detail.dataset.detail);
+ const favorite=e.target.closest('[data-favorite]');if(favorite){const id=favorite.dataset.favorite,had=state.favorites.has(id);if(had)state.favorites.delete(id);else state.favorites.add(id);renderResults();renderFavorites();toast(had?'즐겨찾기에서 해제했어요.':'즐겨찾기에 담았어요.');const button=document.querySelector(`#${state.view==='favorites'?'favoriteCards':'resultCards'} [data-favorite="${id}"]`);button?.focus({preventScroll:true});}
+});
+$('loadMore').onclick=()=>{state.shown+=5;renderResults();};$('closeDetail').onclick=()=>$('detailDialog').close();
+$('detailDialog').addEventListener('click',e=>{if(e.target===$('detailDialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
+$('searchTab').onclick=()=>setView('search');$('favoritesTab').onclick=()=>setView('favorites');$('backToSearch').onclick=()=>setView('search');$('homeButton').onclick=()=>{setView('search');$('queryInput').focus();};
+$('editSearch').onclick=()=>{$('queryInput').focus();$('searchForm').scrollIntoView({block:'center'});};
+$('clearHistory').onclick=()=>{state.history=[];renderHistory();toast('최근 검색 기록을 지웠어요.');};
+$('clearFavorites').onclick=()=>confirmReset('favorites');$('resetAll').onclick=()=>confirmReset('all');
+$('cancelReset').onclick=$('cancelResetX').onclick=()=>$('resetDialog').close();
+$('confirmReset').onclick=()=>{const kind=$('resetDialog').dataset.kind;state.favorites.clear();if(kind==='all'){state.tokens=[];state.result=null;state.history=[];state.shown=5;$('queryInput').value='';message('');renderChips();renderHistory();setView('search');}renderResults();renderFavorites();$('resetDialog').close();toast(kind==='all'?'사용 중 기록을 초기화했어요.':'즐겨찾기를 비웠어요.');};
+$('printButton').onclick=()=>{if(!state.result?.items.length){toast('검색 결과가 있을 때 인쇄할 수 있어요.');return;} $('exportHelp').textContent='인쇄창이 열리지 않으면 Safari 또는 Chrome에서 페이지를 열어 주세요. 이미지 저장 버튼으로도 저장할 수 있어요.';try{window.print();}catch(e){toast('이 화면에서는 인쇄를 지원하지 않아요. 이미지 저장을 이용해 주세요.');}};
+$('addTokenButton').onclick=()=>{addTokens($('queryInput').value);};
+$('searchButton').onclick=()=>{runSearch();};
+
+function saveResultImages(){
+ if(!state.result?.items.length){toast('검색 결과가 있을 때 PDF로 저장할 수 있어요.');return;}
+ try{
+ const pages=[];let canvas,ctx,y;
+ function page(){canvas=document.createElement('canvas');canvas.width=1240;canvas.height=1754;ctx=canvas.getContext('2d');if(!ctx)throw Error('canvas');ctx.fillStyle='#fff';ctx.fillRect(0,0,1240,1754);ctx.fillStyle='#172433';y=80;pages.push(canvas);}
+ function line(text,size=25){ctx.font=`${size}px -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif`;let buf='';for(const ch of String(text)){if(ctx.measureText(buf+ch).width>1080){write(buf,size);buf=ch;}else buf+=ch;}write(buf,size);}
+ function write(t,size){if(y+size+18>1660){page();ctx.font=`${size}px -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif`;}ctx.fillText(t,80,y);y+=size+18;}
+ page();line('보험추천 검색 결과',40);line('검색어: '+state.result.tokens.join(' · '));line('저장일: '+new Date().toLocaleDateString('ko-KR'));y+=20;
+ state.result.items.slice(0,state.shown).forEach((item,i)=>{const p=item.product;if(y>1370)page();line(`${i+1}. ${p.productName}`,30);line(p.insurer+' · '+p.insuranceType);line('주요 보장: '+p.mainCoverages.join(' · '));line(item.reason||'가입대상 조건 일치');line('DB 검증일: '+p.checkedAt,21);y+=22;});
+ line('상품 탐색 참고용입니다. 실제 보장과 가입조건은 약관 및 보험회사에서 확인하세요.',21);
+ const preview=$('imagePreview');preview.replaceChildren();
+ const heading=document.createElement('h3');heading.textContent='검색 결과 이미지';preview.appendChild(heading);
+ const guide=document.createElement('p');guide.textContent='다운로드가 되지 않으면 아래 이미지를 길게 눌러 사진에 저장하세요. 여러 장이면 각각 저장해 주세요.';preview.appendChild(guide);
+ const close=document.createElement('button');close.type='button';close.className='outline-btn';close.textContent='이미지 닫기';close.onclick=()=>{preview.hidden=true;preview.replaceChildren();};preview.appendChild(close);
+ pages.forEach((c,i)=>{const url=c.toDataURL('image/png'),box=document.createElement('div'),label=document.createElement('p'),img=document.createElement('img'),link=document.createElement('a');label.textContent=`이미지 ${i+1} / ${pages.length}`;img.src=url;img.alt=`보험 추천 검색 결과 ${i+1}장`;img.style.cssText='display:block;width:100%;height:auto;margin:12px 0;-webkit-touch-callout:default;user-select:auto';link.href=url;link.download=`보험추천_검색결과_${i+1}.png`;link.textContent=`이미지 ${i+1} 다운로드`;link.className='outline-btn';box.appendChild(label);box.appendChild(img);box.appendChild(link);preview.appendChild(box);});
+ preview.hidden=false;preview.scrollIntoView({block:'start',behavior:'auto'});$('exportHelp').textContent='이미지가 준비됐어요. 아래에서 다운로드하거나 이미지를 길게 눌러 저장하세요.';
+ if(pages.length===1)preview.querySelector('a').click();
+
+ }catch(e){$('exportHelp').textContent='이미지 생성에 실패했어요. Safari 또는 Chrome에서 다시 시도하거나 인쇄를 이용해 주세요.';}
+}
+
+$('imageButton').onclick=saveResultImages;
+
+renderChips();renderFavorites();$('runtimeNotice').hidden=true;
+</script>
+</body></html>
