@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>보험추천 v1</title>
+<style>
+:root{--bg:#fdf6fb;--card:#fff;--tx:#3b3550;--sub:#7d7794;--pk:#ffd6e7;--bl:#d6e9ff;--gr:#d8f3e3;--yl:#fff3c9;--ln:#eadff0}
+@media(prefers-color-scheme:dark){:root{--bg:#25222e;--card:#312d3d;--tx:#f1edf8;--sub:#b5aecb;--pk:#5a3a4d;--bl:#34465e;--gr:#35513f;--yl:#5b5130;--ln:#463f57}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--tx);line-height:1.5;overflow-wrap:anywhere}
+.wrap{max-width:960px;margin:0 auto;padding:16px}
+header{text-align:center;padding:28px 0 8px}
+h1{margin:0;font-size:clamp(24px,5vw,34px)}
+.guide{color:var(--sub);margin:6px 0 16px;font-size:14px}
+.box{background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:16px;box-shadow:0 4px 16px rgba(120,90,150,.08)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{background:var(--pk);border-radius:999px;padding:4px 6px 4px 12px;display:inline-flex;align-items:center;gap:4px}
+.chip button{border:0;background:rgba(0,0,0,.12);color:inherit;border-radius:50%;width:22px;height:22px;cursor:pointer}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input[type=text]{flex:1 1 200px;min-width:0;font-size:18px;padding:14px 16px;border-radius:16px;border:2px solid var(--ln);background:var(--bg);color:var(--tx)}
+button.b{border:0;border-radius:16px;padding:12px 18px;font-size:16px;cursor:pointer;background:var(--bl);color:var(--tx)}
+button.main{background:#ffb3d1;color:#3b1a2c;font-weight:700}
+.msg{min-height:22px;margin-top:8px;font-size:14px;color:#c0396b}
+.note{background:var(--yl);border-radius:14px;padding:10px 14px;font-size:13px;margin:12px 0}
+.small{font-size:13px;color:var(--sub)}
+.tabs{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.cards{display:grid;gap:12px;margin-top:12px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:20px;padding:14px}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.rank{background:var(--pk);border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-weight:700}
+.badge{border-radius:999px;padding:2px 10px;font-size:12px}
+.d{background:var(--gr)}.s{background:var(--yl)}
+.tbl{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+.tbl th,.tbl td{border:1px solid var(--ln);padding:8px;text-align:left;vertical-align:top}
+.tbl th{background:var(--bl)}
+.old{opacity:.6}
+.old::before{content:"이전 검색 결과";display:block;font-size:12px;color:#c0396b}
+dialog{max-width:min(560px,94vw);width:100%;border:0;border-radius:20px;background:var(--card);color:var(--tx);padding:20px}
+dialog::backdrop{background:rgba(0,0,0,.4)}
+ul{padding-left:20px;margin:6px 0}
+@media(max-width:700px){
+.tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+.tbl thead{display:none}
+.tbl tr{border:1px solid var(--ln);border-radius:14px;margin-bottom:10px;padding:6px}
+.tbl td{border:0}
+.tbl td::before{content:attr(data-l) " ";font-weight:700;display:block;font-size:12px;color:var(--sub)}
+}
+@media print{.noprint{display:none!important}body{background:#fff;color:#000}.card,.box{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><h1>🌸 보험추천</h1><p class="guide">관심 단어를 입력하고 Enter를 눌러 등록하세요 (최대 5개). 등록 후 <b>검색하기</b>를 누르면 추천을 보여드려요.</p></header>
+
+<div class="box noprint">
+<div class="chips" id="chips"></div>
+<div class="row">
+<input type="text" id="inp" placeholder="예: 암, 치매, 간병, 40세, 여성" autocomplete="off" enterkeyhint="done">
+<button class="b main" id="go">검색하기</button>
+</div>
+<div class="msg" id="msg" role="status"></div>
+<div class="small" id="recent"></div>
+</div>
+
+<div class="note" id="dbnote"></div>
+<div class="tabs noprint">
+<button class="b" id="tFav">⭐ 즐겨찾기</button>
+<button class="b" id="tPrint">🖨 인쇄·PDF 저장</button>
+<button class="b" id="tReset">기록 초기화</button>
+</div>
+<div id="favBox" class="box noprint" hidden></div>
+<div id="out"></div>
+<p class="small">본 서비스는 개인의 가입 승인·보험금 지급·보장 적합성을 보증하지 않으며 보험료를 표시하지 않습니다. 가입 전 반드시 보험사의 최신 약관·상품설명서를 확인하세요.</p>
+</div>
+<dialog id="dlg"></dialog>
+
+<script>
+/* ===== 검증 상품 DB =====
+ 공식 자료로 확인한 항목만 수록합니다. 확인하지 못한 값은 null(미확인)로 둡니다.
+ 가상 상품은 넣지 않습니다. 목표: 50개 (현재 수록 수는 화면 상단에 표시). */
+const DB=[
+{id:"abl-2601",co:"ABL생명",name:"(무)우리WON건강N더보장종합보험(해약환급금 미지급형)2601",type:"종합건강보험",
+ cov:[{n:"암 진단",g:"암",p:"암진단"},{n:"암 입원",g:"암",p:"암입원"},{n:"암 수술",g:"암",p:"암수술"},{n:"암 통원",g:"암",p:"암통원"},
+ {n:"항암중입자방사선치료",g:"암",p:"항암방사선"},{n:"표적항암약물허가치료",g:"암",p:"표적항암"},{n:"카티(CAR-T)항암약물허가치료",g:"암",p:"카티"},
+ {n:"간병인·간호간병통합서비스 사용 지원",g:"간병",p:"간병지원"},{n:"수술",g:"수술",p:"수술"},{n:"입원",g:"입원",p:"입원"}],
+ sp:"미확인(상품안내서 요약본 기준, 특약 전체 목록 미확인)",
+ cond:{ageMin:null,ageMax:null,gender:null,text:"가입연령·가입대상 미확인 — 보험사 상품설명서 확인 필요"},
+ src:"ABL생명 상품안내서(전속설계사용, 제작 2026.09.01) https://www.abllife.co.kr/cms/prdt/hlthInjry/__icsFiles/afieldfile/2026/08/25/(무)우리WON건강N더보장종합보험(해약환급금_미지급형)2601_FC_20260901.pdf",
+ date:"2026-11-11",status:"보험사 공식 상품안내서(심의 2026.08.21~2027.08.20) 확인. 현재 판매 여부는 별도 재확인 필요"},
+{id:"abl-2607",co:"ABL생명",name:"(무)우리WON케어간병보험(해약환급금 미지급형)2607",type:"간병보험",
+ cov:[{n:"경도치매상태",g:"치매",p:"경도치매"},{n:"중등도치매상태",g:"치매",p:"중등도치매"},{n:"치매",g:"치매",p:"치매"}],
+ sp:"미확인(특약 목록 미확인)",
+ cond:{ageMin:null,ageMax:null,gender:null,text:"가입연령·가입대상 미확인 — 보험사 상품설명서 확인 필요"},
+ src:"ABL생명 상품안내서(전속설계사용, 제작 2026.08.01) https://abllife.co.kr/cms/prdt/hlthInjry/__icsFiles/afieldfile/2026/08/05/(무)우리WON케어간병보험(해약환급금_미지급형)2607_FC_20260801.pdf",
+ date:"2026-11-11",status:"보험사 공식 상품안내서(심의 2026.07.30~2027.07.29) 확인. 현재 판매 여부는 별도 재확인 필요"}
+];
+/* ===== 유틸 ===== */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const nz=s=>String(s).toLowerCase().replace(/\s+/g,"");
+const MAXT=5,MAXC=2;
+let chips=[],recent=[],favs=new Set(),searched=null,shown=5,lastList=[];
+/* ===== 검색어 칩 ===== */
+function msg(t){$("msg").textContent=t||""}
+function addChip(raw){
+  const w=raw.replace(/[,，]/g,"").trim();
+  if(!w){return false}
+  if(chips.some(c=>nz(c)===nz(w))){msg("이미 등록한 검색어예요: "+w);return false}
+  if(chips.length>=MAXT){msg("검색어는 최대 5개까지 등록할 수 있어요.");return false}
+  chips.push(w);msg("");drawChips();return true;
+}
+function drawChips(){
+  $("chips").innerHTML=chips.map((c,i)=>`<span class="chip">${esc(c)}<button aria-label="${esc(c)} 삭제" data-i="${i}">×</button></span>`).join("");
+  if(searched&&JSON.stringify(searched)!==JSON.stringify(chips))$("out").classList.add("old");else $("out").classList.remove("old");
+}
+$("chips").onclick=e=>{const i=e.target.dataset.i;if(i!==undefined){chips.splice(+i,1);drawChips();$("inp").focus()}};
+$("inp").addEventListener("keydown",e=>{
+  if(e.key==="Enter"&&!e.isComposing){e.preventDefault();const v=$("inp").value;if(v.trim()===""){msg("검색어를 입력해 주세요.");return}
+    if(addChip(v))$("inp").value="";}
+});
+$("inp").addEventListener("input",()=>{if(/[,，]/.test($("inp").value))$("inp").value=$("inp").value.replace(/[,，]/g,"")});
+/* ===== 조건 판별 ===== */
+function parseTerm(t){
+  let m=t.match(/^(\d{1,3})\s*(세|살)$/);if(m)return{k:"age",lo:+m[1],hi:+m[1]};
+  m=t.match(/^(\d)0대$/);if(m)return{k:"age",lo:+m[1]*10,hi:+m[1]*10+9};
+  if(/^(남|남성|남자)$/.test(t))return{k:"sex",v:"M"};
+  if(/^(여|여성|여자)$/.test(t))return{k:"sex",v:"F"};
+  return null;
+}
+function condCheck(p,conds){
+  let unk=false;
+  for(const c of conds){
+    if(c.k==="age"){
+      if(p.cond.ageMin==null||p.cond.ageMax==null){unk=true;continue}
+      if(c.hi<p.cond.ageMin||c.lo>p.cond.ageMax)return"bad";
+    }else{
+      if(p.cond.gender==null){unk=true;continue}
+      if(p.cond.gender!=="any"&&p.cond.gender!==c.v)return"bad";
+    }
+  }
+  return unk?"unk":"ok";
+}
+/* ===== 추천 계산 ===== */
+function analyze(p,terms){
+  const nm=nz(p.name),hit={},covHit={};
+  let rel=[];
+  terms.forEach(t=>{
+    const k=nz(t),cs=p.cov.filter(c=>nz(c.n).includes(k)||nz(c.g).includes(k));
+    if(cs.length){covHit[t]=cs;hit[t]=1;rel=rel.concat(cs)}
+    else if(nm.includes(k))hit[t]=2;
+  });
+  const uniq=[...new Map(rel.map(c=>[c.p,c])).values()]; // 같은 보장 목적 중복 제거
+  return{p,hit,covHit,rel:uniq,nCov:Object.keys(covHit).length,nAny:Object.keys(hit).length,kinds:new Set(uniq.map(c=>c.g)).size};
+}
+function search(){
+  if($("inp").value.trim())if(addChip($("inp").value))$("inp").value="";
+  if(!chips.length){msg("검색어를 입력해 주세요.");return}
+  msg("");
+  const conds=[],terms=[];
+  chips.forEach(c=>{const x=parseTerm(c);x?conds.push(x):terms.push(c)});
+  searched=chips.slice();shown=5;
+  recent=[chips.join(", "),...recent.filter(r=>r!==chips.join(", "))].slice(0,5);
+  drawRecent();drawChips();
+  let pool=DB.map(p=>({p,s:condCheck(p,conds)})).filter(x=>x.s!=="bad"&&!(conds.length&&x.s==="unk")).map(x=>x.p);
+  const note=[];
+  if(!terms.length){ // 조건 전용
+    lastList=pool.slice().sort((a,b)=>a.co.localeCompare(b.co,"ko")||a.name.localeCompare(b.name,"ko")).map(p=>({p,mode:"cond"}));
+    renderCond(conds,note);return;
+  }
+  const maxN=Math.max(1,...DB.map(p=>analyze(p,terms).rel.length));
+  const maxK=Math.max(1,...DB.map(p=>analyze(p,terms).kinds));
+  const A=pool.map(p=>analyze(p,terms)).filter(a=>a.nAny>0);
+  A.forEach(a=>{
+    a.score=a.nAny/terms.length*40+a.nCov/terms.length*20+(a.nAny===terms.length?10:0)+a.rel.length/maxN*15+a.kinds/maxK*15;
+    a.direct=a.nCov>0;
+  });
+  const cmp=(x,y)=>(y.direct-x.direct)||(y.score-x.score)||(y.rel.length-x.rel.length)||(y.kinds-x.kinds)||x.p.co.localeCompare(y.p.co,"ko")||x.p.name.localeCompare(y.p.name,"ko");
+  A.sort(cmp);
+  const pick=[],cnt={};
+  const take=(a,mode)=>{if(pick.length>=5||pick.some(x=>x.a.p.id===a.p.id))return;if((cnt[a.p.co]||0)>=MAXC)return;cnt[a.p.co]=(cnt[a.p.co]||0)+1;pick.push({a,mode})};
+  A.forEach(a=>take(a,"direct"));
+  if(pick.length<5){ // 유사상품: 일치 보장과 같은 분류를 가진 상품
+    const groups=new Set();A.forEach(a=>Object.values(a.covHit).flat().forEach(c=>groups.add(c.g)));
+    const S=pool.filter(p=>!pick.some(x=>x.a.p.id===p.id)).map(p=>{const a=analyze(p,[]);a.sim=p.cov.filter(c=>groups.has(c.g));a.rel=a.sim;a.kinds=new Set(a.sim.map(c=>c.g)).size;a.score=0;return a})
+      .filter(a=>a.sim.length).sort(cmp);
+    S.forEach(a=>take(a,"sim"));
+  }
+  lastList=pick;renderRec(terms,conds,pick);
+}
+/* ===== 화면 ===== */
+function drawRecent(){$("recent").textContent=recent.length?"최근 검색어: "+recent.join(" · "):""}
+function reason(x,terms){
+  const a=x.a;
+  if(x.mode==="sim")return`일치하는 보장은 없지만 같은 ‘${[...new Set(a.sim.map(c=>c.g))].join("·")}’ 분류의 보장(${a.sim.slice(0,2).map(c=>c.n).join(", ")})을 갖춘 유사상품입니다.`;
+  if(a.direct){const f=Object.values(a.covHit).flat();const u=[...new Map(f.map(c=>[c.n,c])).values()];
+    return`${Object.keys(a.covHit).map(t=>"‘"+t+"’").join("·")} 관련 주요 보장: ${u.slice(0,3).map(c=>c.n).join(", ")}${u.length>3?" 외 "+(u.length-3)+"건":""}.`}
+  return`상품명에 ${Object.keys(a.hit).map(t=>"‘"+t+"’").join("·")}이(가) 포함됩니다(주요 보장명 일치는 아님).`;
+}
+function card(p,idx,badge,why){
+  return`<div class="card"><div class="top">${idx?`<div class="rank">${idx}</div>`:""}<b>${esc(p.co)}</b>${badge?`<span class="badge ${badge==="직접 관련"?"d":"s"}">${badge}</span>`:""}<span class="small">${esc(p.type)}</span></div>
+  <h3 style="margin:8px 0">${esc(p.name)}</h3>
+  <div class="small">주요 보장: ${esc(p.cov.slice(0,6).map(c=>c.n).join(", "))}${p.cov.length>6?" 외 "+(p.cov.length-6)+"건":""}</div>
+  ${why?`<p style="margin:8px 0">💡 ${esc(why)}</p>`:""}
+  <div class="small">공식 자료 검증일 ${esc(p.date)} · ${esc(p.status)}</div>
+  <div class="row noprint" style="margin-top:8px"><button class="b" data-d="${p.id}">상세보기</button><button class="b" data-f="${p.id}">${favs.has(p.id)?"★ 즐겨찾기 해제":"☆ 즐겨찾기"}</button></div></div>`;
+}
+function table(ps){
+  return`<table class="tbl"><thead><tr><th>보험회사</th><th>상품명</th><th>보험 종류</th><th>주요 보장</th></tr></thead><tbody>${ps.map(p=>`<tr><td data-l="보험회사">${esc(p.co)}</td><td data-l="상품명">${esc(p.name)}</td><td data-l="보험 종류">${esc(p.type)}</td><td data-l="주요 보장">${esc(p.cov.map(c=>c.n).join(", "))}</td></tr>`).join("")}</tbody></table>`;
+}
+function shortage(n){return n<5?`<div class="note">조건에 맞는 검증 상품 ${n}개만 표시합니다 (검증 DB 수록 ${DB.length}개). 검색어를 바꾸거나 줄여 보세요.</div>`:""}
+function renderRec(terms,conds,pick){
+  let h=`<h2>추천 결과 (${pick.length}개)</h2>`;
+  if(!pick.length)h+=`<div class="note">조건에 맞는 상품을 찾지 못했어요. 검색어를 수정해 주세요.${conds.length?" (가입조건 검색어는 조건이 확인된 상품만 통과합니다.)":""}</div>`;
+  else{h+=shortage(pick.length)+`<div class="cards">${pick.map((x,i)=>card(x.a.p,i+1,x.mode==="sim"?"유사상품":"직접 관련",reason(x,terms))).join("")}</div><h2>비교표</h2>${table(pick.map(x=>x.a.p))}`}
+  $("out").innerHTML=h;
+}
+function renderCond(conds,note){
+  const L=lastList.slice(0,shown);
+  let h=`<h2>가입조건 일치 상품 (${lastList.length}개)</h2><p class="small">조건만 검색하여 점수·순위 없이 보험회사명·상품명 순으로 보여드려요. 관심 보장을 추가하면 추천 5개로 전환됩니다.</p>`;
+  if(!lastList.length)h+=`<div class="note">조건이 확인된 상품이 없어요. 현재 수록 상품은 가입연령·성별 조건이 아직 미확인입니다.</div>`;
+  else h+=`<div class="cards">${L.map(x=>card(x.p,0,"","")).join("")}</div>${lastList.length>shown?`<div class="row noprint" style="margin-top:12px"><button class="b" id="more">더 보기</button></div>`:""}`;
+  $("out").innerHTML=h;
+}
+$("out").addEventListener("click",e=>{
+  const t=e.target;
+  if(t.id==="more"){shown+=5;renderCond();return}
+  if(t.dataset.d)detail(t.dataset.d);
+  if(t.dataset.f)toggleFav(t.dataset.f);
+});
+function toggleFav(id){favs.has(id)?favs.delete(id):favs.add(id);if(searched)reRender();drawFav()}
+function reRender(){const y=scrollY;search_keep();scrollTo(0,y)}
+function search_keep(){ // 즐겨찾기 표시 갱신용(기록 변경 없이 다시 그림)
+  const o=$("out"),old=o.classList.contains("old");
+  const s=searched,c=chips.slice();chips=s.slice();const r=recent.slice();search();chips=c;recent=r;drawRecent();drawChips();if(old)o.classList.add("old");
+}
+function detail(id){
+  const p=DB.find(x=>x.id===id);if(!p)return;
+  $("dlg").innerHTML=`<h3 style="margin-top:0">${esc(p.name)}</h3><p><b>${esc(p.co)}</b> · ${esc(p.type)}</p>
+  <b>주요 보장</b><ul>${p.cov.map(c=>`<li>${esc(c.n)}</li>`).join("")}</ul>
+  <b>특약</b><p>${esc(p.sp)}</p>
+  <b>가입조건</b><p>${esc(p.cond.text)}${p.cond.ageMin!=null?` (가입연령 ${p.cond.ageMin}~${p.cond.ageMax}세)`:""}</p>
+  <b>검증 정보</b><p class="small">검증일 ${esc(p.date)}<br>${esc(p.status)}<br>출처: ${esc(p.src)}</p>
+  <button class="b main" onclick="document.getElementById('dlg').close()">닫기</button>`;
+  $("dlg").showModal();
+}
+function drawFav(){
+  const b=$("favBox");
+  b.innerHTML=favs.size?`<b>⭐ 즐겨찾기 (이 창을 닫으면 사라져요)</b><div class="cards">${DB.filter(p=>favs.has(p.id)).map(p=>card(p,0,"","")).join("")}</div>`:`<b>⭐ 즐겨찾기</b><p class="small">아직 없어요.</p>`;
+}
+$("favBox").addEventListener("click",e=>{const t=e.target;if(t.dataset.d)detail(t.dataset.d);if(t.dataset.f)toggleFav(t.dataset.f)});
+$("tFav").onclick=()=>{drawFav();$("favBox").hidden=!$("favBox").hidden};
+$("tPrint").onclick=()=>print();
+$("tReset").onclick=()=>{recent=[];favs.clear();chips=[];searched=null;lastList=[];$("out").innerHTML="";$("out").classList.remove("old");drawChips();drawRecent();drawFav();msg("기록을 초기화했어요.")};
+$("go").onclick=search;
+$("dbnote").textContent=`현재 공식 자료로 검증한 상품 ${DB.length}개 수록 (최종 목표 50개). 수록 상품이 5개 미만이면 5개보다 적게 표시됩니다. 판매 여부·가입조건은 보험사에서 꼭 확인하세요.`;
+drawChips();
+</script>
+</body>
+</html>
