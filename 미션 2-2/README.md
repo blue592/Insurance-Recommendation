@@ -22,3 +22,10 @@
 - [보험상품db제작 대화내역캡쳐 .md](대화캡쳐내역/보험상품db제작%20대화내역캡쳐%20.md): 50개 DB 제작, 중복 검사, 공식 상품안내 기준과 약관 제외 결정, v2 커밋을 정리한 대화 기록
 - [대화캡쳐내역 폴더 README](대화캡쳐내역/README.md)
 - [대화 공유 링크](https://chatgpt.com/share/6af46f9e-ea18-83ee-b214-257532709383)
+
+## Gemini HTML 제작 및 대화 사진
+
+- [보험추천_제미나이.html](%EC%A0%9C%EC%9E%91%EA%B2%80%EC%A6%9D/%E1%84%87%E1%85%A9%E1%84%92%E1%85%A5%E1%86%B7%E1%84%8E%E1%85%AE%E1%84%8E%E1%85%A5%E1%86%AB_%E1%84%8C%E1%85%A6%E1%84%86%E1%85%B5%E1%84%82%E1%85%A1%E1%84%8B%E1%85%B5.html): 기획서와 50개 상품 DB를 반영해 제작된 것으로 첨부 대화에 기록된 Gemini HTML. 사용자가 제공한 원본 파일을 수정 없이 보관했습니다.
+- [제미나이 html제작요청 대화내역.png](%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD%EC%BA%A1%EC%B3%90/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4%20html%EC%A0%9C%EC%9E%91%EC%9A%94%EC%B2%AD%20%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD.png): 기획서·보험상품 DB를 첨부한 HTML 제작 요청, Gemini 응답 및 대화 이미지 제작 요청이 담긴 사용자 제공 PNG.
+- [대화내역캡쳐 폴더 README](%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD%EC%BA%A1%EC%B3%90/README.md)
+- [Gemini 대화 공유 링크](https://share.gemini.google/ZUuPwisJKDJ4)
