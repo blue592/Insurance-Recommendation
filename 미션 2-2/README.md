@@ -29,3 +29,10 @@
 - [제미나이 html제작요청 대화내역.png](%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD%EC%BA%A1%EC%B3%90/%EC%A0%9C%EB%AF%B8%EB%82%98%EC%9D%B4%20html%EC%A0%9C%EC%9E%91%EC%9A%94%EC%B2%AD%20%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD.png): 기획서·보험상품 DB를 첨부한 HTML 제작 요청, Gemini 응답 및 대화 이미지 제작 요청이 담긴 사용자 제공 PNG.
 - [대화내역캡쳐 폴더 README](%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD%EC%BA%A1%EC%B3%90/README.md)
 - [Gemini 대화 공유 링크](https://share.gemini.google/ZUuPwisJKDJ4)
+
+## 제작·검증 기록 — AI B(제미나이)
+
+- [제작검증기록.md](제작검증기록.md): AI B를 Google Gemini로 기재하고 대화 이미지의 제작 요청·첨부 자료와 HTML 소스에서 확인한 기능을 기록했습니다. 세부 모델명은 미확인입니다.
+- 단일 HTML 구성, 단일·복수 검색, 반응형 CSS를 소스 기준으로 정리했으며 브라우저 실행 테스트 통과로 표시하지 않았습니다.
+- AI A(챗지피티) 항목과 비교 칸은 공란으로 유지했습니다. 실제 테스트 결과·결과물 선택·수정 및 사용자 테스트 기록은 추후 확인 후 작성합니다.
+
