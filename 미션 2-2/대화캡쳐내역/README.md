@@ -18,7 +18,7 @@
 ## 보험추천 HTML 제작 대화
 
 - [(보험추천HTML제작)대화내역.md](<(%EB%B3%B4%ED%97%98%EC%B6%94%EC%B2%9CHTML%EC%A0%9C%EC%9E%91)%EB%8C%80%ED%99%94%EB%82%B4%EC%97%AD.md>): 현재 ChatGPT 제작·커밋 대화와 Gemini 공유 페이지의 제작 요청·답변을 구분해 기록. Gemini 자동 모드·세부 모델명 미확인 및 검증 범위 명시.
-- [ChatGPT HTML](../보험추천_챗지피티.html): 50개 상품 DB 내장 제작본.
+- [ChatGPT HTML](../보험추천%20챗지피티v1.html): 50개 상품 DB 내장 제작본.
 - [Gemini 공유 대화](https://share.gemini.google/ZUuPwisJKDJ4)
 
 Gemini의 구현 설명은 원래 응답의 기록이며 독립적인 실행 테스트 결과가 아닙니다. 사용자 지정 서비스모델명과 확인 가능한 실제 서비스·모드를 분리했습니다.
