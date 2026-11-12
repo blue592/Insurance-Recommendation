@@ -1,0 +1,2159 @@
+{
+  "title": "보험상품 추가 60개 DB",
+  "checkedAt": "2026-11-12",
+  "sourceFile": "보험추천_챗지피티v5(1).html",
+  "sourceSha256": "1992caf2d18f5513bf78a0beb57c3e3abe63810695193d0ce5f0b7982cc00d24",
+  "existingCount": 59,
+  "additionalCount": 60,
+  "combinedCount": 119,
+  "important": "60개 모두의 조사일 실제 청약 가능을 확정한 DB가 아닙니다. 한화손해보험 추가 10개 중 6개는 공식 상품안내, 4개는 현재 판매 재확인 대상입니다.",
+  "statusLegend": {
+    "D": "공식 상품안내 확인",
+    "L": "공식 판매목록 확인·상세 재확인",
+    "I": "공식 검색자료 확인·현재 판매 재확인",
+    "S": "공식 상품안내 확인·모집기간 별도"
+  },
+  "statusCounts": {
+    "D": 30,
+    "L": 13,
+    "S": 1,
+    "I": 16
+  },
+  "products": [
+    {
+      "id": "ADD50-001",
+      "insurer": "현대해상",
+      "productName": "다이렉트 실손의료비보장보험",
+      "insuranceType": "실손",
+      "mainCoverages": [
+        "질병의료비",
+        "상해의료비",
+        "입원",
+        "통원"
+      ],
+      "eligibilitySummary": "의료비 실손보상 상품. 가입유형·보장 구분에 따라 자기부담금과 한도가 다름.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://cardirect-direct.hi.co.kr/service.do?m=ddd18946bf",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "고정 진단금 상품과 구분합니다. 실손 세대·자기부담률은 최신 계약 안내로 확인하며 DB에 임의 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://cardirect-direct.hi.co.kr/service.do?m=ddd18946bf",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트실손의료비보장보험"
+    },
+    {
+      "id": "ADD50-002",
+      "insurer": "현대해상",
+      "productName": "다이렉트 오토바이운전자보험",
+      "insuranceType": "오토바이/운전자",
+      "mainCoverages": [
+        "이륜차",
+        "교통사고처리지원금",
+        "벌금",
+        "변호사선임비용",
+        "상해"
+      ],
+      "eligibilitySummary": "이륜차 운전자 대상. 출퇴근 등 사용 용도에 따라 가입채널·인수조건 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://m.direct-hi.co.kr/service.do?m=eadc02573c",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "운전자 비용담보는 해당 특약 가입 시. 배달 등 유상운송은 별도 확인이 필요하며 이륜자동차 의무보험을 대체하지 않습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://m.direct-hi.co.kr/service.do?m=eadc02573c",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트오토바이운전자보험"
+    },
+    {
+      "id": "ADD50-003",
+      "insurer": "현대해상",
+      "productName": "다이렉트 디지털사고안심보험",
+      "insuranceType": "디지털/금융사기",
+      "mainCoverages": [
+        "피싱",
+        "해킹",
+        "인터넷쇼핑몰사기",
+        "인터넷직거래사기"
+      ],
+      "eligibilitySummary": "디지털 금융사기·거래사기 관련 손해를 선택 담보에 따라 구성.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mdirect.hi.co.kr/service.do?m=afj34h2170",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "모든 사기가 보장되는 것은 아닙니다. 담보별 사고 정의·신고 절차·자기부담금·한도 확인이 필요합니다.",
+      "searchKeywords": [
+        "디지털",
+        "보이스피싱"
+      ],
+      "sources": [
+        {
+          "url": "https://mdirect.hi.co.kr/service.do?m=afj34h2170",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트디지털사고안심보험"
+    },
+    {
+      "id": "ADD50-004",
+      "insurer": "현대해상",
+      "productName": "다이렉트 해외여행보험",
+      "insuranceType": "여행",
+      "mainCoverages": [
+        "해외여행",
+        "여행중상해",
+        "여행중질병",
+        "배상책임",
+        "여권분실"
+      ],
+      "eligibilitySummary": "3개월 이내 해외여행 안내. 출국 전 가입 및 여행목적·연령 등 조건 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mdirect.hi.co.kr/service.do?HDMS1=inner&HDMS2=hismart&HDMS3=trip&HDMS4=main_banner2&m=817c44de32",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "보장별 특약 선택 필요. 여권 재발급 관련 보장과 모든 휴대품 분실 보장은 같지 않습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mdirect.hi.co.kr/service.do?HDMS1=inner&HDMS2=hismart&HDMS3=trip&HDMS4=main_banner2&m=817c44de32",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트해외여행보험"
+    },
+    {
+      "id": "ADD50-005",
+      "insurer": "현대해상",
+      "productName": "다이렉트 해외장기체류보험",
+      "insuranceType": "장기체류",
+      "mainCoverages": [
+        "해외장기체류"
+      ],
+      "eligibilitySummary": "3개월 초과 해외 체류 상품으로 공식 메뉴에서 단기 여행보험과 구분됨.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mplatform.hi.co.kr/service.do?m=074b8f3cf5",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "상품 메뉴·체류기간 구분을 확인했습니다. 의료비·휴대품 등 개별 담보와 최장 가입기간은 상세 재확인 전입니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mplatform.hi.co.kr/service.do?m=074b8f3cf5",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트해외장기체류보험"
+    },
+    {
+      "id": "ADD50-006",
+      "insurer": "현대해상",
+      "productName": "다이렉트 사업장화재보험",
+      "insuranceType": "사업자/화재",
+      "mainCoverages": [
+        "사업장화재",
+        "잔존물제거",
+        "화재배상책임",
+        "음식물배상책임",
+        "도난",
+        "휴업손해"
+      ],
+      "eligibilitySummary": "개인사업자 사업장 대상. 업종·건물 조건에 따라 가입 가능 여부가 다름.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mplatform.hi.co.kr/service.do?m=1182fdf94f",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "해당 특약 가입 시. 법인 사업장 및 일부 건물은 다이렉트 대상에서 제외됩니다. 자기 재산손해와 타인 배상책임을 구분해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mplatform.hi.co.kr/service.do?m=1182fdf94f",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트사업장화재보험"
+    },
+    {
+      "id": "ADD50-007",
+      "insurer": "현대해상",
+      "productName": "다이렉트 골프보험",
+      "insuranceType": "골프",
+      "mainCoverages": [
+        "골프중상해",
+        "골프중배상책임",
+        "홀인원비용"
+      ],
+      "eligibilitySummary": "골프 활동 관련 위험. 기간과 선택 보장에 따라 구성.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://hyundai-direct.hi.co.kr/service.do?_BT_tab=PRDD0008&inpath=MB&m=1e760af7b1&tagtype=9",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "홀인원은 해당 특약 및 골프장·홀 수·실제 지출 등 요건 적용. 홀인원 성공 자체에 무조건 정액 지급하는 것으로 처리하지 않습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://hyundai-direct.hi.co.kr/service.do?_BT_tab=PRDD0008&inpath=MB&m=1e760af7b1&tagtype=9",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트골프보험"
+    },
+    {
+      "id": "ADD50-008",
+      "insurer": "현대해상",
+      "productName": "연금저축손해보험 현대해상다이렉트연금보험(Hi2601)",
+      "insuranceType": "연금저축",
+      "mainCoverages": [
+        "연금",
+        "연금저축"
+      ],
+      "eligibilitySummary": "연금저축보험. 납입·수령·중도해지에 따른 세제 조건 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mdirect.hi.co.kr/service.do?m=a642e850f9",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "세액공제액·수익률·최저보증이율을 일률적으로 확정하지 않았습니다. 중도해지 손실과 연금 외 수령 시 과세를 확인해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mdirect.hi.co.kr/service.do?m=a642e850f9",
+          "kind": "공식 상품안내"
+        },
+        {
+          "url": "https://www.hi.co.kr/serviceAction.do?menuId=100950",
+          "kind": "공식 가격공시·정식 상품명"
+        }
+      ],
+      "familyKey": "현대해상::연금저축손해보험현대해상다이렉트연금보험"
+    },
+    {
+      "id": "ADD50-009",
+      "insurer": "현대해상",
+      "productName": "다이렉트 원데이자동차보험",
+      "insuranceType": "원데이/자동차",
+      "mainCoverages": [
+        "다른자동차운전",
+        "렌터카",
+        "대인배상",
+        "대물배상",
+        "다른자동차손해"
+      ],
+      "eligibilitySummary": "타인 차량 또는 렌터카의 단기 운전 용도. 차량·운전자·보장개시 조건 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mdirect.hi.co.kr/service.do?m=6960460e4b",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "차량손해는 충돌 대상·사고 유형·자기부담금 등 제한이 있습니다. 차량 소유자의 자동차보험 및 임시운전자 특약과 구별됩니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mdirect.hi.co.kr/service.do?m=6960460e4b",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트원데이자동차보험"
+    },
+    {
+      "id": "ADD50-010",
+      "insurer": "현대해상",
+      "productName": "다이렉트 간편건강보험(암뇌심 치료비 플랜)",
+      "insuranceType": "간편/유병자",
+      "mainCoverages": [
+        "간편건강",
+        "유병자",
+        "암치료비",
+        "뇌혈관치료비",
+        "심장치료비"
+      ],
+      "eligibilitySummary": "간편고지 유형. 건강 관련 질문과 인수심사를 거쳐 가입 여부 결정.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://hyundai-direct.hi.co.kr/service.do?m=0820669027&type=C",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "동일 간편건강보험의 다른 플랜은 별도 상품으로 세지 않았습니다. 특약별 면책·감액·연간 한도와 일반심사형 보험료를 비교해야 합니다.",
+      "searchKeywords": [
+        "간편"
+      ],
+      "sources": [
+        {
+          "url": "https://hyundai-direct.hi.co.kr/service.do?m=0820669027&type=C",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "현대해상::다이렉트간편건강보험"
+    },
+    {
+      "id": "ADD50-011",
+      "insurer": "NH농협손해보험",
+      "productName": "(무)NH다이렉트종합보험2601",
+      "insuranceType": "종합/질병",
+      "mainCoverages": [
+        "상해사망",
+        "암진단",
+        "뇌혈관질환",
+        "허혈성심장질환",
+        "질병수술",
+        "골절"
+      ],
+      "eligibilitySummary": "19~70세 안내. 보험기간·특약별 가입조건 및 갱신 조건 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D313215",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "진단·수술·골절 등은 해당 특약 가입 시. 담보별 지급조건과 보장개시일이 다릅니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D313215",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::NH다이렉트종합보험2601"
+    },
+    {
+      "id": "ADD50-012",
+      "insurer": "NH농협손해보험",
+      "productName": "(무)NH다이렉트운전자보험2601",
+      "insuranceType": "운전자",
+      "mainCoverages": [
+        "교통사고처리지원금",
+        "벌금",
+        "변호사선임비용",
+        "골절",
+        "상해수술"
+      ],
+      "eligibilitySummary": "19~70세, 자가용 운전자 안내. 운전 여부·보험기간별 조건 적용.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D312326",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "선택 특약에 따라 보장합니다. 음주·무면허·도주·약물 운전 등 제외사유 및 실손 비용담보의 비례보상 확인이 필요합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D312326",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::NH다이렉트운전자보험2601"
+    },
+    {
+      "id": "ADD50-013",
+      "insurer": "NH농협손해보험",
+      "productName": "레저상해보험",
+      "insuranceType": "상해/레저",
+      "mainCoverages": [
+        "상해사망",
+        "상해후유장해",
+        "골절",
+        "상해수술"
+      ],
+      "eligibilitySummary": "1~80세, 1년 계약 안내. 보험 시작일 전 가입 필요.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E710211",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "골절은 치아파절 제외 등 담보별 조건 적용. 15세 미만 사망담보 제한 및 위험 운동의 인수조건을 확인해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E710211",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::레저상해보험"
+    },
+    {
+      "id": "ADD50-014",
+      "insurer": "NH농협손해보험",
+      "productName": "(무)NH다이렉트펫앤미든든보험[1종:강아지]2604",
+      "insuranceType": "펫/반려동물",
+      "mainCoverages": [
+        "반려견",
+        "질병의료비",
+        "상해의료비",
+        "입원",
+        "통원",
+        "수술",
+        "배상책임"
+      ],
+      "eligibilitySummary": "계약자 19~80세, 반려견 생후 3개월~10세 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D314513",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "특약별 보장범위가 다릅니다. 슬개골·고관절 관련 대기기간과 자기부담금을 확인해야 합니다. 주계약 보험기간과 반려동물 담보 갱신기간이 달라 일괄 표기하지 않았습니다.",
+      "searchKeywords": [
+        "펫",
+        "반려동물",
+        "동물",
+        "강아지"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=D314513",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::NH다이렉트펫앤미든든보험[1종:강아지]2604"
+    },
+    {
+      "id": "ADD50-015",
+      "insurer": "NH농협손해보험",
+      "productName": "주택화재보험",
+      "insuranceType": "화재/주택",
+      "mainCoverages": [
+        "주택화재",
+        "소방손해",
+        "피난손해",
+        "잔존물제거",
+        "화재배상책임"
+      ],
+      "eligibilitySummary": "주택 건물·가재 등 목적물별 가입. 일반적으로 1년, 계약 조건별 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E110111",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "이웃에 대한 배상책임은 해당 특약 가입 시. 건물과 가재도구의 가입금액·가입대상을 구분해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E110111",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::주택화재보험"
+    },
+    {
+      "id": "ADD50-016",
+      "insurer": "NH농협손해보험",
+      "productName": "재난배상책임보험",
+      "insuranceType": "사업자/배상책임",
+      "mainCoverages": [
+        "화재",
+        "폭발",
+        "붕괴",
+        "타인배상책임"
+      ],
+      "eligibilitySummary": "음식점 등 가입대상 시설의 운영자. 시설 종류·규모별 조건 적용.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E611511",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "제3자에 대한 법률상 배상책임 중심입니다. 자기 사업장의 건물·재고 손해를 보장하는 화재보험과 구분합니다.",
+      "searchKeywords": [
+        "사업자",
+        "사업장"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E611511",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::재난배상책임보험"
+    },
+    {
+      "id": "ADD50-017",
+      "insurer": "NH농협손해보험",
+      "productName": "농작물재해보험(밭작물)",
+      "insuranceType": "농작물",
+      "mainCoverages": [
+        "농작물",
+        "자연재해",
+        "조수해",
+        "화재",
+        "수확량감소",
+        "생산비"
+      ],
+      "eligibilitySummary": "대상 작물·지역·재배방식별 인수. 품목별 모집기간에 지역 농축협 등에서 가입.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=H310110",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_seasonal_product_checked",
+      "validationScope": "공식 상품안내 확인·모집기간 별도; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 상품안내 운영. 품목·지역별 모집기간이 달라 조사일 접수 가능 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인·모집기간 별도",
+      "evidenceCode": "S",
+      "caveat": "밭작물 품목들을 별도 상품으로 중복 집계하지 않았습니다. 오늘 접수 가능한 품목·지역은 미확인입니다. 자기부담비율·보상방식·보험료 지원은 품목별로 다릅니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=H310110",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::농작물재해보험"
+    },
+    {
+      "id": "ADD50-018",
+      "insurer": "NH농협손해보험",
+      "productName": "가축재해보험",
+      "insuranceType": "동물/가축",
+      "mainCoverages": [
+        "가축",
+        "축사",
+        "질병",
+        "화재",
+        "풍수해",
+        "설해",
+        "폭염",
+        "지진"
+      ],
+      "eligibilitySummary": "소·돼지·말·가금류 등 대상 가축과 축사. 1년 계약 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E930111",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "축종·목적물별 보장과 특약이 다릅니다. 반려견·반려묘 의료비를 위한 펫보험으로 분류하지 않습니다.",
+      "searchKeywords": [
+        "동물"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E930111",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::가축재해보험"
+    },
+    {
+      "id": "ADD50-019",
+      "insurer": "NH농협손해보험",
+      "productName": "농기계종합보험",
+      "insuranceType": "농기계/종합",
+      "mainCoverages": [
+        "농기계손해",
+        "대인배상",
+        "대물배상",
+        "자기신체사고"
+      ],
+      "eligibilitySummary": "대상 농기계 소유·사용자. 1년 계약 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=G610110",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "농기계 종류와 용도별 인수 및 담보 확인 필요. 일반 승용차 자동차보험으로 분류하지 않습니다. 지원보험료는 필수 가입담보 등 조건 적용.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=G610110",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::농기계종합보험"
+    },
+    {
+      "id": "ADD50-020",
+      "insurer": "NH농협손해보험",
+      "productName": "실손보상 소상공인 풍수해ㆍ지진재해보험(Ⅵ)",
+      "insuranceType": "사업자/풍수해/지진",
+      "mainCoverages": [
+        "소상공인",
+        "상가",
+        "공장",
+        "풍수해",
+        "지진",
+        "기계",
+        "재고자산"
+      ],
+      "eligibilitySummary": "소상공인의 상가·공장 등 대상 시설·자산. 1년 계약 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E990151",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "자연재해로 인한 실제 재산손해 상품입니다. 사람의 병원비를 보장하는 실손의료보험과 구분합니다. 지원비율·자기부담금은 가입조건 확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.nhfire.co.kr/product/retrieveProduct.nhfire?pdtCd=E990151",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "NH농협손해보험::실손보상소상공인풍수해ㆍ지진재해보험"
+    },
+    {
+      "id": "ADD50-021",
+      "insurer": "롯데손해보험",
+      "productName": "let:safe 실손의료보험(개인)",
+      "insuranceType": "실손",
+      "mainCoverages": [
+        "실손의료보험"
+      ],
+      "eligibilitySummary": "개인 실손의료보험으로 공식 가격공시에 구분 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "세대·급여/비급여 구조·최신 담보·가입연령은 상세 재확인 전입니다. 여행용 실손의료보험과 별도로 1건만 집계했습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:safe실손의료보험"
+    },
+    {
+      "id": "ADD50-022",
+      "insurer": "롯데손해보험",
+      "productName": "let:simple 3N5 간편맞춤 건강보험",
+      "insuranceType": "간편/유병자",
+      "mainCoverages": [
+        "유병자",
+        "간편건강",
+        "질병수술",
+        "표적항암치료",
+        "항암방사선치료"
+      ],
+      "eligibilitySummary": "간편고지 유형. 15~90세 안내 범위 안에서도 플랜·담보별 가입조건 상이.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://online.lotteins.co.kr/web/C/C/store/gd/gd_online.jsp?IF=A000009&PB=simple&pgmseq=11&type=t1",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "무사고 등 조건을 충족해야 계약전환이 가능합니다. 모든 기존 질환이 보장되거나 가입이 보장된다는 뜻은 아닙니다.",
+      "searchKeywords": [
+        "간편"
+      ],
+      "sources": [
+        {
+          "url": "https://online.lotteins.co.kr/web/C/C/store/gd/gd_online.jsp?IF=A000009&PB=simple&pgmseq=11&type=t1",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:simple3N5간편맞춤건강보험"
+    },
+    {
+      "id": "ADD50-023",
+      "insurer": "롯데손해보험",
+      "productName": "let:click 개인용자동차보험(CM)",
+      "insuranceType": "자동차",
+      "mainCoverages": [
+        "개인용자동차"
+      ],
+      "eligibilitySummary": "인터넷 가입 개인용 자동차보험으로 공식 가격공시에 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "현재 보장담보·운전자 범위·연령·할인특약은 개별 견적에서 재확인해야 합니다. 같은 상품의 TM 채널은 추가 집계하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:click개인용자동차보험"
+    },
+    {
+      "id": "ADD50-024",
+      "insurer": "롯데손해보험",
+      "productName": "let:safe 레저상해보험",
+      "insuranceType": "상해/레저",
+      "mainCoverages": [
+        "레저상해"
+      ],
+      "eligibilitySummary": "앨리스 여행·자전거 관련 화면에서 같은 정식 보험명 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://alice.lotteins.co.kr/product/trip/main",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "공식 검색 색인의 상품명·유효기간 문구를 확인했습니다. 원문 접근 제한으로 보장 구성과 조사일 신규 가입 여부는 재확인 대상입니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://alice.lotteins.co.kr/product/trip/main",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 가격공시"
+        },
+        {
+          "url": "https://alice.lotteins.co.kr/product/bike/main",
+          "kind": "동일 보험의 다른 플랜"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:safe레저상해보험"
+    },
+    {
+      "id": "ADD50-025",
+      "insurer": "롯데손해보험",
+      "productName": "let:discover 해외여행보험Ⅱ",
+      "insuranceType": "여행",
+      "mainCoverages": [
+        "해외여행"
+      ],
+      "eligibilitySummary": "공식 가격공시에 등재된 해외여행보험.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "단기 해외여행용 상품으로 분류했습니다. 의료비·휴대품·지연 등 구체 담보는 이 개정판의 약관·설계로 재확인해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:discover해외여행보험Ⅱ"
+    },
+    {
+      "id": "ADD50-026",
+      "insurer": "롯데손해보험",
+      "productName": "let:discover 해외장기체류자보험Ⅱ",
+      "insuranceType": "장기체류",
+      "mainCoverages": [
+        "해외장기체류"
+      ],
+      "eligibilitySummary": "공식 가격공시에 등재된 해외 장기체류자 상품.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "체류목적·국가·최장기간·귀국 후 의료비·국내 실손과의 관계는 상세 재확인 전입니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:discover해외장기체류자보험Ⅱ"
+    },
+    {
+      "id": "ADD50-027",
+      "insurer": "롯데손해보험",
+      "productName": "let:safe 주택화재보험",
+      "insuranceType": "화재/주택",
+      "mainCoverages": [
+        "주택화재",
+        "풍수재",
+        "지진"
+      ],
+      "eligibilitySummary": "주택 목적물에 대한 화재보험. 선택특약별 재해 구분.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "풍수재·지진은 공식 공개 약관의 선택특약 범위입니다. 2025-09-01 약관을 보조자료로 보았으며 실제 청약에 쓰이는 최신 약관과 동일한지는 미확인입니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://biz.lotteins.co.kr/upload/C/letsafe_house_20250901.pdf",
+          "kind": "공개 약관·2025-09-01판; 최신판 일치 미확인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:safe주택화재보험"
+    },
+    {
+      "id": "ADD50-028",
+      "insurer": "롯데손해보험",
+      "productName": "let:guard 안심사이버보험(불효자 플랜)",
+      "insuranceType": "디지털/보이스피싱",
+      "mainCoverages": [
+        "보이스피싱",
+        "피싱",
+        "파밍",
+        "스미싱",
+        "금융사기"
+      ],
+      "eligibilitySummary": "앨리스 불효자 플랜의 정식 상품명은 let:guard 안심사이버보험.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://alice.lotteins.co.kr/product/unfilial/main",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "공식 검색 색인의 2026년 안내를 확인했습니다. 원문 접근 제한으로 현재 판매 재확인 필요. 신고기한·자기부담금·환급액 공제 및 보장하지 않는 사기 유형 확인 필요.",
+      "searchKeywords": [
+        "디지털"
+      ],
+      "sources": [
+        {
+          "url": "https://alice.lotteins.co.kr/product/unfilial/main",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://alice.lotteins.co.kr/product/unfilial/main_01",
+          "kind": "공식 검색자료의 보상조건"
+        },
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 가격공시"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:guard안심사이버보험"
+    },
+    {
+      "id": "ADD50-029",
+      "insurer": "롯데손해보험",
+      "productName": "let:celebrate 홀인원보험",
+      "insuranceType": "골프/홀인원",
+      "mainCoverages": [
+        "홀인원"
+      ],
+      "eligibilitySummary": "공식 가격공시에 등재된 홀인원 관련 상품.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "보장 방식·골프장 요건·비용 증빙·한도는 상세 재확인 전입니다. 골프 상해까지 보장한다고 추정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://biz.lotteins.co.kr/web/C/D/H/cdh_price_index.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:celebrate홀인원보험"
+    },
+    {
+      "id": "ADD50-030",
+      "insurer": "롯데손해보험",
+      "productName": "let:play 1540종합보험(10플러스)(2604)",
+      "insuranceType": "종합/청년",
+      "mainCoverages": [
+        "종합보험"
+      ],
+      "eligibilitySummary": "공식 상품안내에 1540종합보험(10플러스)(2604)로 게시.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://m.lotteins.co.kr/mobile/new_mobile/jsp/product/health_insurance41.jsp",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "기존 도담도담 자녀보험과 다른 상품명입니다. 상품명의 숫자를 가입연령으로 자동 해석하지 않았습니다. 최신 특약·환급금 유형은 재확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://m.lotteins.co.kr/mobile/new_mobile/jsp/product/health_insurance41.jsp",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "롯데손해보험::let:play1540종합보험"
+    },
+    {
+      "id": "ADD50-031",
+      "insurer": "흥국화재",
+      "productName": "(무)흥Good 실손의료보험(26.05)",
+      "insuranceType": "실손",
+      "mainCoverages": [
+        "실손의료보험"
+      ],
+      "eligibilitySummary": "공식 가격공시에 신규용과 재가입·전환용이 구분 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "재가입·재개·계약전환용을 별도 신규상품으로 세지 않았습니다. 실제 적용 세대·가입요건·자기부담률은 최신 계약 자료 확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "흥국화재::흥Good실손의료보험"
+    },
+    {
+      "id": "ADD50-032",
+      "insurer": "흥국화재",
+      "productName": "보통상해보험",
+      "insuranceType": "상해",
+      "mainCoverages": [
+        "상해"
+      ],
+      "eligibilitySummary": "일반보험 상해 분야의 공식 가격공시에 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "구체 담보·직업급수·가입연령·위험활동 제외사항은 상세 재확인 전입니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "흥국화재::보통상해보험"
+    },
+    {
+      "id": "ADD50-033",
+      "insurer": "흥국화재",
+      "productName": "(무)흥Good The건강한 4565 종합보험(26.10)",
+      "insuranceType": "건강/질병",
+      "mainCoverages": [
+        "상해후유장해",
+        "암진단",
+        "뇌졸중",
+        "급성심근경색증"
+      ],
+      "eligibilitySummary": "45~65세 안내. 일반고지·건강고지 및 갱신·비갱신 유형별 가입조건 적용.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=2458",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "검색 색인의 26.05판 대신 현재 상세페이지의 26.10판을 채택했습니다. 주요 질병 진단은 해당 특약 가입 시. 건강고지형은 유병자 간편심사형과 다릅니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=2458",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "흥국화재::흥GoodThe건강한4565종합보험"
+    },
+    {
+      "id": "ADD50-034",
+      "insurer": "흥국화재",
+      "productName": "(무)흥Good The편한 운전자상해보험(26.09)",
+      "insuranceType": "운전자",
+      "mainCoverages": [
+        "운전자상해"
+      ],
+      "eligibilitySummary": "기존 DB의 SMILE 운전자종합보험과 별도 명칭의 상품.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/announce/protectFinanceLong.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "등록부에 26.09판 판매개시일 2026-09-01, 종료일 공란으로 확인. 비용담보 한도·변호사선임비 적용단계·보장 제외는 최신 상세 재확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/announce/protectFinanceLong.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 가격공시"
+        }
+      ],
+      "familyKey": "흥국화재::흥GoodThe편한운전자상해보험"
+    },
+    {
+      "id": "ADD50-035",
+      "insurer": "흥국화재",
+      "productName": "해외여행보험",
+      "insuranceType": "여행",
+      "mainCoverages": [
+        "여행중상해",
+        "여행중질병",
+        "휴대품손해",
+        "배상책임"
+      ],
+      "eligibilitySummary": "관광·출장·방문 등 해외여행. 기간·연령·위험활동별 인수조건 적용.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/company/insDamageOverseasTrip.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "해당 특약 가입 시. 휴대품 단순 분실은 제외됩니다. 일부 안내의 제도·금액 문구가 오래되어 수치·가입한도를 확정값으로 옮기지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/company/insDamageOverseasTrip.do",
+          "kind": "공식 상품안내"
+        },
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/announce/protectFinanceGeneral.do",
+          "kind": "공식 등록부·판매종료일 공란"
+        }
+      ],
+      "familyKey": "흥국화재::해외여행보험"
+    },
+    {
+      "id": "ADD50-036",
+      "insurer": "흥국화재",
+      "productName": "(무)흥Good 행복든든 재산종합보험(26.03)",
+      "insuranceType": "사업자/재산종합",
+      "mainCoverages": [
+        "재산종합보험",
+        "화재"
+      ],
+      "eligibilitySummary": "공식 가격공시 및 등록부에 26.03판 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "업종별 배상책임·보이스피싱 등은 과거 25.06판 보도자료에 등장합니다. 현재 26.03판 담보와 동일하다고 확정하지 않아 검색 보장에 추가하지 않았습니다.",
+      "searchKeywords": [
+        "사업자",
+        "사업장"
+      ],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/announce/protectFinanceLong.do",
+          "kind": "공식 등록부·26.03 판매종료일 공란"
+        }
+      ],
+      "familyKey": "흥국화재::흥Good행복든든재산종합보험"
+    },
+    {
+      "id": "ADD50-037",
+      "insurer": "흥국화재",
+      "productName": "골프보험",
+      "insuranceType": "골프",
+      "mainCoverages": [
+        "골프",
+        "홀인원비용"
+      ],
+      "eligibilitySummary": "골프 관련 위험 및 선택특약. 홀인원은 국내 18홀 이상 골프장 등 요건 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/company/insTotalGolf.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "해당 담보 가입 시 실제 지출 및 증빙 요건 적용. 일반 상금처럼 무조건 지급하는 상품으로 분류하지 않습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/company/insTotalGolf.do",
+          "kind": "공식 상품안내"
+        },
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 판매 가격공시"
+        }
+      ],
+      "familyKey": "흥국화재::골프보험"
+    },
+    {
+      "id": "ADD50-038",
+      "insurer": "흥국화재",
+      "productName": "흥국 개인용자동차보험",
+      "insuranceType": "자동차",
+      "mainCoverages": [
+        "개인용자동차"
+      ],
+      "eligibilitySummary": "공식 가격공시의 개인용자동차보험.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_sales_listing_checked",
+      "validationScope": "공식 판매목록 확인·상세 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 판매·가격공시에 등재. 최신 개정판·개인별 청약은 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 판매목록 확인·상세 재확인",
+      "evidenceCode": "L",
+      "caveat": "업무용·영업용·다이렉트 채널을 별도 추가상품으로 세지 않았습니다. 담보 구성·운전자 범위·할인특약은 개별 견적 확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do",
+          "kind": "공식 목록/검색 색인"
+        }
+      ],
+      "familyKey": "흥국화재::흥국개인용자동차보험"
+    },
+    {
+      "id": "ADD50-039",
+      "insurer": "흥국화재",
+      "productName": "연금저축손해보험 흥Good 행복디딤돌보험(26.01)",
+      "insuranceType": "연금저축",
+      "mainCoverages": [
+        "연금",
+        "연금저축"
+      ],
+      "eligibilitySummary": "연금저축보험. 납입기간·연금개시·세제 요건별 확인.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=32",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "사업비를 제외한 적립부분에 이율이 적용됩니다. 과거 게시 이율을 현재 확정수익률로 사용하지 않았으며 중도해지·연금 외 수령 시 세금을 확인해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=32",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "흥국화재::연금저축손해보험흥Good행복디딤돌보험"
+    },
+    {
+      "id": "ADD50-040",
+      "insurer": "흥국화재",
+      "productName": "(무)흥Good 모두 담은 123 치매보험(26.05)",
+      "insuranceType": "치매/간병",
+      "mainCoverages": [
+        "경증치매",
+        "중등증치매",
+        "중증치매",
+        "치매진단"
+      ],
+      "eligibilitySummary": "일반심사·간편심사 유형. 20세~최대70세 안내이나 기간·납입 조건별 상이.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=2066",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "조사일 공식 상품안내에 게시. 개인별 청약 승인 여부는 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "단계별 치매보장은 해당 특약 가입 시. CDR척도·전문의 진단·상태 지속 확인 등 요건이 있습니다. 간편심사형은 일반형과 보험료·심사 조건이 다릅니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkukfire.co.kr/FRW/insurance/insGoods.do?seq=2066",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "흥국화재::흥Good모두담은123치매보험"
+    },
+    {
+      "id": "ADD50-041",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 오튼튼 5.10.5건강보험(갱신형)",
+      "insuranceType": "건강/질병",
+      "mainCoverages": [
+        "건강보험"
+      ],
+      "eligibilitySummary": "공식 상품목록에서 건강고지 관련 상품으로 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "건강고지형을 유병자 간편가입 상품과 혼동하지 않도록 분리했습니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명오튼튼5.10.5건강보험"
+    },
+    {
+      "id": "ADD50-042",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 다사랑 3N5간편건강보험",
+      "insuranceType": "간편/유병자",
+      "mainCoverages": [
+        "간편건강",
+        "유병자"
+      ],
+      "eligibilitySummary": "간편고지 유형. 병력이 있는 사람을 위한 심사 간소화 상품으로 공식 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "질환 보장 여부·고지문항·면책과 감액은 별도 확인이 필요합니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [
+        "간편"
+      ],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명다사랑3N5간편건강보험"
+    },
+    {
+      "id": "ADD50-043",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 다(多)사랑통합보험V2",
+      "insuranceType": "통합",
+      "mainCoverages": [
+        "통합보험",
+        "특약구성"
+      ],
+      "eligibilitySummary": "선택특약으로 보장을 구성하는 통합형 상품.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "환급금 유형과 담보별 보장범위를 현재 판매 설계서에서 확인해야 합니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명다사랑통합보험V2"
+    },
+    {
+      "id": "ADD50-044",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 다(多)사랑암보험(해약환급금미지급형V2)",
+      "insuranceType": "암/질병",
+      "mainCoverages": [
+        "암진단",
+        "암치료"
+      ],
+      "eligibilitySummary": "암 진단과 치료 관련 상품으로 공식 대표 목록에 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "진단비와 치료비는 지급조건이 다릅니다. 유사암 분류·보장개시일·감액기간은 미확정입니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명다사랑암보험"
+    },
+    {
+      "id": "ADD50-045",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 다재다능종합보험",
+      "insuranceType": "어린이/종합",
+      "mainCoverages": [
+        "어린이",
+        "질병",
+        "종합보험"
+      ],
+      "eligibilitySummary": "어린이 질환부터 성인 질환까지 대비하는 자녀 종합상품으로 공식 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "태아 가입이나 임신·출산 보장이 자동 포함된다고 추정하지 않았습니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명다재다능종합보험"
+    },
+    {
+      "id": "ADD50-046",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 치매담은시니어보장보험",
+      "insuranceType": "치매/간병",
+      "mainCoverages": [
+        "치매",
+        "간병"
+      ],
+      "eligibilitySummary": "치매 진단부터 간병 관련 보장을 다루는 공식 대표상품.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "치매 중증도·장기요양등급·간병서비스·특약을 구분해야 합니다. 과거판 즉시보장 문구를 모든 담보에 적용하지 않았습니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/product/productMain.do",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명치매담은시니어보장보험"
+    },
+    {
+      "id": "ADD50-047",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 실손의료비보험(갱신형)",
+      "insuranceType": "실손",
+      "mainCoverages": [
+        "실손의료보험"
+      ],
+      "eligibilitySummary": "판매중 필터 공식 공시 검색목록에 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "신규 가입 가능 여부와 실손 세대·자기부담금·갱신 조건은 확인 전입니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명실손의료비보험"
+    },
+    {
+      "id": "ADD50-048",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 49재하늘소풍제례종신보험",
+      "insuranceType": "종신/제례",
+      "mainCoverages": [
+        "종신",
+        "사망보장"
+      ],
+      "eligibilitySummary": "공식 판매·가격공시에 제례 관련 종신보험으로 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "상조 관련 탐색 후보입니다. 선불식 상조회사 상품과 동일하게 취급하지 않았고 장례·제례 서비스의 실제 제공 범위도 확인 전입니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [
+        "상조",
+        "제례"
+      ],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명49재하늘소풍제례종신보험"
+    },
+    {
+      "id": "ADD50-049",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 온라인정기보험",
+      "insuranceType": "정기/사망",
+      "mainCoverages": [
+        "정기보험",
+        "사망보장"
+      ],
+      "eligibilitySummary": "공식 판매·가격공시의 온라인 정기보험.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "종신형과 구별되는 기간형 상품으로 분류했습니다. 보험기간·사망담보 지급조건은 상세 미확인입니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명온라인정기보험"
+    },
+    {
+      "id": "ADD50-050",
+      "insurer": "흥국생명",
+      "productName": "(무)흥국생명 온라인연금저축보험",
+      "insuranceType": "연금저축",
+      "mainCoverages": [
+        "연금",
+        "연금저축"
+      ],
+      "eligibilitySummary": "판매중 필터 공식 공시 검색목록에 등재.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 상품안내 수준의 요약이며 약관 전체 대조·개별 청약·보험금 산정은 하지 않음",
+      "onSaleStatus": "공식 검색 색인에 등재. 원문 접근 제한으로 조사일 실제 판매 여부 미확정.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "연금보험·저축보험·연금저축보험의 세제를 혼동하지 않도록 연금저축으로 구분했습니다. 이율·납입·수령 조건은 미확정입니다. 공식 판매목록 검색 색인에서는 확인했지만 원문이 해외 IP 제한 안내로 연결되어 현재 판매·최신 개정판·상세 조건을 확정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "공식 목록/검색 색인"
+        },
+        {
+          "url": "https://www.heungkuklife.co.kr/front/public/saleProduct.do?searchFlgSale=Y",
+          "kind": "판매중 필터 공식 목록의 검색 색인; 실시간 원문 제한"
+        }
+      ],
+      "familyKey": "흥국생명::흥국생명온라인연금저축보험"
+    },
+    {
+      "id": "ADD60-051",
+      "insurer": "한화손해보험",
+      "productName": "한화 더건강한 한아름종합보험(무)2604",
+      "insuranceType": "통합/종합건강",
+      "mainCoverages": [
+        "암진단",
+        "뇌혈관질환",
+        "허혈성심장질환",
+        "질병수술",
+        "상해수술",
+        "입원"
+      ],
+      "eligibilitySummary": "일반고지·건강고지 및 환급금 유형별 심사. 건강상태에 따른 무사고 전환제도 안내.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/operation?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "질병 진단·치료·수술·입원은 해당 특약 가입 시. 특약별 면책기간·감액기간·횟수 조건이 다릅니다. 건강고지형을 유병자 간편심사형과 구분했습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/operation?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::한화더건강한한아름종합보험2604"
+    },
+    {
+      "id": "ADD60-052",
+      "insurer": "한화손해보험",
+      "productName": "한화 3N5 더간편건강보험(세만기형)(무)2604",
+      "insuranceType": "간편/유병자",
+      "mainCoverages": [
+        "유병자",
+        "간편건강",
+        "암진단",
+        "뇌혈관질환",
+        "허혈성심장질환",
+        "중환자실입원"
+      ],
+      "eligibilitySummary": "간편고지 유형. 종류에 따라 15세~최대80세 또는 최대89세 안내. 고지기간·담보·납입 조건에 따라 제한.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/well?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "고혈압·당뇨 등 병력이 있어도 자동 가입되는 것은 아닙니다. 실제 고지 질문과 심사를 거쳐 결정하며 암 보장개시·1년 미만 감액 등 특약별 조건을 확인해야 합니다.",
+      "searchKeywords": [
+        "간편"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/well?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::한화3N5더간편건강보험2604"
+    },
+    {
+      "id": "ADD60-053",
+      "insurer": "한화손해보험",
+      "productName": "한화 더경증 간편건강보험Ⅱ(세만기형)(무)2604",
+      "insuranceType": "간병/간편",
+      "mainCoverages": [
+        "간병인사용입원생활비",
+        "요양병원",
+        "간호간병통합서비스",
+        "질병입원",
+        "상해입원"
+      ],
+      "eligibilitySummary": "간편심사 유형의 건강보험에서 간병 특약을 선택하는 구성.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/the_care2?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "간병인 실제 사용·유상 서비스 증빙이 필요합니다. 요양병원과 일반병원 담보, 연간 지급일수, 간호간병통합서비스를 각각 구분해야 합니다. 치매 진단만으로 지급되는 상품으로 분류하지 않았습니다.",
+      "searchKeywords": [
+        "간병",
+        "간편"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/the_care2?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::한화더경증간편건강보험Ⅱ2604"
+    },
+    {
+      "id": "ADD60-054",
+      "insurer": "한화손해보험",
+      "productName": "한화 홈앤라이프 종합보험(무)",
+      "insuranceType": "주택/화재",
+      "mainCoverages": [
+        "주택화재",
+        "누수",
+        "도난",
+        "임시거주비",
+        "화재배상책임"
+      ],
+      "eligibilitySummary": "주택 건물·가재 등 목적물별 가입. 주택유형과 건물 상태에 따른 심사.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/house?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "선택특약별 적용. 자기 주택 손해와 이웃 배상책임은 별도 담보이며 건물·가재 가입금액도 구분합니다. 누수의 대기기간·자기부담금은 가입 설계 확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/house?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::한화홈앤라이프종합보험"
+    },
+    {
+      "id": "ADD60-055",
+      "insurer": "한화손해보험",
+      "productName": "성공하는 Owner 재산종합보험(무)2604",
+      "insuranceType": "사업자/재산종합",
+      "mainCoverages": [
+        "사업장화재",
+        "화재배상책임",
+        "음식물배상책임",
+        "급배수시설누출",
+        "점포휴업일당"
+      ],
+      "eligibilitySummary": "사업장·다중이용업소 관련 상품. 업종·영업목적·시설 상태 등에 따른 인수심사.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/fire?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "음식물배상·누수·휴업 등은 해당 특약 가입 시. 공개 설계의 누수담보에 90일 면책이 기재되어 있습니다. 휴업 전반을 무조건 보장하지 않으며 화재 등 약정된 사고와 복구 요건을 확인해야 합니다.",
+      "searchKeywords": [
+        "사업자",
+        "상가",
+        "사업장"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/fire?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::성공하는Owner재산종합보험2604"
+    },
+    {
+      "id": "ADD60-056",
+      "insurer": "한화손해보험",
+      "productName": "한화 100세 암치료보장보험(무)2604",
+      "insuranceType": "암/치료",
+      "mainCoverages": [
+        "암진단",
+        "유사암진단",
+        "암특정치료생활비",
+        "중입자방사선치료",
+        "암통원"
+      ],
+      "eligibilitySummary": "암 진단·치료 중심 상품. 선택특약·보험기간·납입 조건별 심사.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhains.co.kr/cancer_care?banner=1&campaign=display&media=skybanner",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_product_page_checked",
+      "validationScope": "공식 상품안내 확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "조사일 공식 상품몰의 현재 상품안내·상담 경로 확인. 개인별 인수심사 별도.",
+      "recommendationEligible": true,
+      "verified": true,
+      "reviewStatus": "공식 상품안내 확인",
+      "evidenceCode": "D",
+      "caveat": "기존 다이렉트 내가고른 암보험과 다른 상품명입니다. 공개 보통약관 암진단비는 가입 후 91일부터, 1년 미만 50% 지급 안내. 유사암·치료비 등은 별도 조건 적용.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.hanwhains.co.kr/cancer_care?banner=1&campaign=display&media=skybanner",
+          "kind": "공식 상품안내"
+        }
+      ],
+      "familyKey": "한화손해보험::한화100세암치료보장보험2604"
+    },
+    {
+      "id": "ADD60-057",
+      "insurer": "한화손해보험",
+      "productName": "싱글도전한다 다이렉트 백돌이홀인원보험(무)",
+      "insuranceType": "골프",
+      "mainCoverages": [
+        "홀인원비용",
+        "두번째홀인원비용",
+        "골프존스크린홀인원",
+        "알바트로스비용"
+      ],
+      "eligibilitySummary": "골프보험의 선택 플랜·담보별 보장. 정규홀과 스크린골프 요건을 구분.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hanwhadirect.com/ltr/golf/step01.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "공식 검색자료에서 상품안내 확인. 원문 접근 제한 또는 시간초과로 조사일 현재 판매·최신 조건 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "검색 색인에 현행 보험료 확인 화면이 있으나 원문은 방화벽 제한 안내였습니다. 비용 지출·증빙·홀인원 횟수·기간 조건을 확인해야 하며 2024년 약관을 최신 개정판으로 단정하지 않았습니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.hanwhadirect.com/ltr/golf/step01.do",
+          "kind": "공식 상품안내 검색 색인·실시간 원문 미확인"
+        },
+        {
+          "url": "https://www.hanwhadirect.com/service/benefit/card_02.do",
+          "kind": "공식 메뉴의 상품명"
+        },
+        {
+          "url": "https://www.hanwhadirect.com/upload/product/LA02632001.pdf",
+          "kind": "2024년 공개 약관·상품군 식별용, 현행판 일치 미확인"
+        }
+      ],
+      "familyKey": "한화손해보험::싱글도전한다다이렉트백돌이홀인원보험"
+    },
+    {
+      "id": "ADD60-058",
+      "insurer": "한화손해보험",
+      "productName": "한화다이렉트 개인용자동차보험",
+      "insuranceType": "자동차",
+      "mainCoverages": [
+        "대인배상",
+        "대물배상",
+        "자기신체사고",
+        "자동차상해",
+        "무보험차상해"
+      ],
+      "eligibilitySummary": "개인 소유 승용차 대상의 개인용 상품. 차량·운전자 범위·운전가능 연령별 설계.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://market.hwgeneralins.com/ins/ccr/car_features_01.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "공식 검색자료에서 상품안내 확인. 원문 접근 제한 또는 시간초과로 조사일 현재 판매·최신 조건 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "공식 상품몰에서 가입 링크, 검색 자료에서 담보 설명을 확인했지만 상세 원문은 시간초과였습니다. 모든 담보가 자동 포함되는 것은 아니며 자기신체사고와 자동차상해의 선택, 운전자 한정 및 사고부담금 조건 확인 필요.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://market.hwgeneralins.com/ins/ccr/car_features_01.do",
+          "kind": "공식 상품안내 검색 색인·실시간 원문 미확인"
+        },
+        {
+          "url": "https://www.hanwhains.co.kr/main",
+          "kind": "공식 상품몰 현재 자동차보험 가입 링크"
+        }
+      ],
+      "familyKey": "한화손해보험::한화다이렉트개인용자동차보험"
+    },
+    {
+      "id": "ADD60-059",
+      "insurer": "한화손해보험",
+      "productName": "연금저축손해보험 골드연금보험 2601",
+      "insuranceType": "연금저축",
+      "mainCoverages": [
+        "연금",
+        "연금저축",
+        "계약자배당",
+        "추가적립"
+      ],
+      "eligibilitySummary": "연금저축보험. 연금개시 전 추가적립 등 조건 적용.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://www.hwgeneralins.com/product/catalog/product-info.do?insGdcd=LA01416001",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "공식 검색자료에서 상품안내 확인. 원문 접근 제한 또는 시간초과로 조사일 현재 판매·최신 조건 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "공식 검색자료에 2601판 및 2026-05-28~2027-05-27 안내문 유효기간이 있으나 원문은 방화벽 제한이었습니다. 계약자 배당은 운용실적에 따라 없을 수 있습니다. 세액공제·중도해지·연금 외 수령 조건 별도 확인.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://www.hwgeneralins.com/product/catalog/product-info.do?insGdcd=LA01416001",
+          "kind": "공식 상품안내 검색 색인·실시간 원문 미확인"
+        }
+      ],
+      "familyKey": "한화손해보험::연금저축손해보험골드연금보험2601"
+    },
+    {
+      "id": "ADD60-060",
+      "insurer": "한화손해보험",
+      "productName": "(무)한화실손의료보험(갱신형)III_TM",
+      "insuranceType": "실손",
+      "mainCoverages": [
+        "상해의료비",
+        "질병의료비",
+        "입원",
+        "통원",
+        "비급여의료비"
+      ],
+      "eligibilitySummary": "공식 TM 상품안내 검색자료에서 실손의료보험을 확인. 신규 가입 가능 조건은 재확인 필요.",
+      "ageMin": null,
+      "ageMax": null,
+      "sourceUrl": "https://mall.hwgeneralins.com/ins/ltr/meditm_features_01.do",
+      "sourceKind": "보험사 공식 웹사이트",
+      "checkedAt": "2026-11-12",
+      "validationLevel": "official_search_index_only",
+      "validationScope": "공식 검색자료 확인·현재 판매 재확인; 약관 전체 대조·개별 청약·보험금 산정 제외",
+      "onSaleStatus": "공식 검색자료에서 상품안내 확인. 원문 접근 제한 또는 시간초과로 조사일 현재 판매·최신 조건 재확인 필요.",
+      "recommendationEligible": true,
+      "verified": false,
+      "reviewStatus": "공식 검색자료 확인·현재 판매 재확인",
+      "evidenceCode": "I",
+      "caveat": "원문은 방화벽 제한이었습니다. 검색 자료 안에 상품과 맞지 않는 운전자 예시 및 연령 문구가 함께 있어 가입연령·세대·자기부담률을 확정 입력하지 않았습니다. 실제 판매 중인 최신 판과 청약 가능 여부를 우선 확인해야 합니다.",
+      "searchKeywords": [],
+      "sources": [
+        {
+          "url": "https://mall.hwgeneralins.com/ins/ltr/meditm_features_01.do",
+          "kind": "공식 상품안내 검색 색인·실시간 원문 미확인"
+        }
+      ],
+      "familyKey": "한화손해보험::한화실손의료보험III_TM"
+    }
+  ]
+}
