@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보장 중심 맞춤 보험추천</title>
+  <style>
+    :root {
+      --bg-color: #f7f9fc;
+      --card-bg: #ffffff;
+      --primary-color: #6c5ce7;
+      --primary-light: #a29bfe;
+      --primary-subtle: #f0edff;
+      --accent-color: #00b894;
+      --accent-light: #e6fffa;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --border-color: #dfe6e9;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 20px 12px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding: 20px 10px 10px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Top Action Bar Navigation */
+    .nav-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f1f2f6;
+      border-color: #b2bec3;
+    }
+
+    /* Main Search Section */
+    .search-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .input-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1rem;
+      border: 2px solid var(--primary-light);
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: border-color 0.2s;
+      background-color: #fafaff;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary-color);
+      background-color: #fff;
+    }
+
+    .btn-add {
+      background-color: var(--primary-light);
+      color: white;
+      border: none;
+      padding: 0 18px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .btn-add:hover {
+      background-color: var(--primary-color);
+    }
+
+    .chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 38px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    .chip {
+      background-color: var(--primary-subtle);
+      color: var(--primary-color);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(108, 92, 231, 0.2);
+    }
+
+    .chip .chip-remove {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1;
+      color: var(--primary-color);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chip .chip-remove:hover {
+      background-color: rgba(108, 92, 231, 0.2);
+    }
+
+    .btn-search {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary-color), #8c7ae6);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+      transition: transform 0.1s, opacity 0.2s;
+    }
+
+    .btn-search:hover {
+      opacity: 0.95;
+    }
+
+    .btn-search:active {
+      transform: scale(0.99);
+    }
+
+    /* History & Stale Banner */
+    .history-box {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .history-tag {
+      background: #f1f2f6;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .history-tag:hover {
+      background: #dfe6e9;
+      color: var(--text-main);
+    }
+
+    .stale-notice {
+      background-color: #fff9db;
+      border: 1px solid #ffe066;
+      color: #856404;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Result Banner & Cards */
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .result-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .result-count {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .result-count strong {
+      color: var(--primary-color);
+    }
+
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .card-badge-group {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .badge-rank {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .badge-direct {
+      background-color: var(--accent-light);
+      color: #00b894;
+      border: 1px solid #00b894;
+    }
+
+    .badge-similar {
+      background-color: #fff3bf;
+      color: #f59f00;
+      border: 1px solid #f59f00;
+    }
+
+    .badge-condition {
+      background-color: #e7f5ff;
+      color: #1c7ed6;
+      border: 1px solid #1c7ed6;
+    }
+
+    .insurer-name {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .product-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .coverage-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .cov-tag {
+      font-size: 0.8rem;
+      background: #f1f2f6;
+      color: #4b6584;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .reason-box {
+      background-color: #f8f9fa;
+      border-left: 3px solid var(--primary-light);
+      padding: 8px 12px;
+      font-size: 0.88rem;
+      color: #495057;
+      margin-bottom: 14px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .fav-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #ccc;
+      transition: color 0.2s;
+    }
+
+    .fav-btn.active {
+      color: #ff6b6b;
+    }
+
+    .btn-detail {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 1px solid var(--primary-light);
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .btn-detail:hover {
+      background-color: var(--primary-subtle);
+    }
+
+    .load-more-container {
+      text-align: center;
+      margin: 20px 0 30px;
+    }
+
+    /* Comparison Table Section */
+    .comparison-section {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 30px;
+      border: 1px solid var(--border-color);
+    }
+
+    .comparison-section h2 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .comp-table th {
+      background-color: #f8f9fa;
+      color: var(--text-muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .mobile-comp-cards {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-comp-card {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      font-size: 0.85rem;
+    }
+
+    .mobile-comp-card div {
+      margin-bottom: 4px;
+    }
+
+    /* Modals */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .modal-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      max-width: 550px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #f1f2f6;
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .modal-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .detail-item {
+      margin-bottom: 14px;
+    }
+
+    .detail-item label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .detail-item div {
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .verified-info {
+      background-color: #f1f3f5;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      color: #495057;
+      margin-top: 16px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .nav-bar, .search-card, .btn-detail, .fav-btn, .modal-backdrop, .stale-notice, .load-more-container {
+        display: none !important;
+      }
+      .card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        margin-bottom: 12px;
+      }
+      .comparison-section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+      .comp-table th, .comp-table td {
+        border-color: #eee;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .comp-table {
+        display: none;
+      }
+      .mobile-comp-cards {
+        display: flex;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .search-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Navigation -->
+  <div class="nav-bar">
+    <button class="btn-secondary" onclick="openFavoritesModal()">★ 즐겨찾기 목록</button>
+    <button class="btn-secondary" onclick="resetAllData()">↺ 기록 초기화</button>
+    <button class="btn-secondary" onclick="window.print()">🖨️ PDF / 인쇄</button>
+  </div>
+
+  <header>
+    <h1>맞춤 보험상품 추천</h1>
+    <p>관심 보장 단어 및 가입조건을 입력하시면 검증된 DB 기반 맞춤 추천 결과를 보여드립니다.</p>
+  </header>
+
+  <main>
+    <!-- Search Card -->
+    <section class="search-card">
+      <div class="input-group">
+        <div class="input-wrapper">
+          <input type="text" id="keywordInput" class="search-input" placeholder="예: 암, 실손, 운전자, 어린이, 30세" onkeydown="handleKeyDown(event)">
+        </div>
+        <button class="btn-add" onclick="addChipFromInput()">추가</button>
+      </div>
+
+      <div class="chips-container" id="chipsContainer">
+        <!-- Keyword chips rendered dynamically -->
+      </div>
+
+      <button class="btn-search" onclick="executeSearch()">검색하기</button>
+
+      <div class="history-box" id="historyBox">
+        <span>최근 검색어:</span>
+        <span id="historyItems">없음</span>
+      </div>
+    </section>
+
+    <!-- Stale Notice Banner -->
+    <div class="stale-notice" id="staleNotice">
+      <span>⚠️ 검색어가 변경되었습니다. 최신 결과를 보시려면 <strong>'검색하기'</strong> 버튼을 눌러주세요. (아래는 이전 검색 결과입니다)</span>
+    </div>
+
+    <!-- Results Section -->
+    <section id="resultsSection">
+      <div class="result-header">
+        <span class="result-title" id="resultTitle">추천 결과</span>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+
+      <div class="recommend-grid" id="recommendGrid">
+        <!-- Recommended cards inserted here -->
+      </div>
+
+      <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+        <button class="btn-secondary" style="padding: 10px 24px; font-size: 0.95rem;" onclick="loadMoreConditionResults()">더 보기 (5개 추가)</button>
+      </div>
+
+      <!-- Comparison Section -->
+      <div class="comparison-section" id="comparisonSection" style="display: none;">
+        <h2>📊 추천 상품 자동 비교표</h2>
+        <div class="table-wrapper">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>보험회사</th>
+                <th>상품명</th>
+                <th>보험 종류</th>
+                <th>주요 보장</th>
+                <th>구분</th>
+              </tr>
+            </thead>
+            <tbody id="compTableBody">
+            </tbody>
+          </table>
+        </div>
+        <div class="mobile-comp-cards" id="mobileCompCards">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detail Modal -->
+  <div class="modal-backdrop" id="detailModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('detailModal')">✕</button>
+      <div class="modal-title" id="mTitle">상품명</div>
+      <div class="modal-subtitle" id="mInsurer">보험사명</div>
+
+      <div class="detail-item">
+        <label>보험 종류</label>
+        <div id="mType">-</div>
+      </div>
+      <div class="detail-item">
+        <label>주요 보장 내용</label>
+        <div id="mCoverages">-</div>
+      </div>
+      <div class="detail-item">
+        <label>가입조건 및 참고사항</label>
+        <div id="mEligibility">-</div>
+      </div>
+      <div class="detail-item">
+        <label>가입 연령 정보</label>
+        <div id="mAgeInfo">상세 약관 및 심사에 따름 (공식 안내 기준)</div>
+      </div>
+
+      <div class="verified-info">
+        <div><strong>공식 자료 검증일:</strong> <span id="mCheckedAt">-</span></div>
+        <div><strong>판매 확인 상태:</strong> <span id="mStatus">-</span></div>
+        <div><strong>자료 출처:</strong> <span id="mSource">-</span></div>
+        <div style="margin-top: 4px; color: #868e96; font-size: 0.72rem;" id="mCaveat"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Favorites Modal -->
+  <div class="modal-backdrop" id="favModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('favModal')">✕</button>
+      <div class="modal-title">즐겨찾기 한 상품</div>
+      <div class="modal-subtitle">현재 세션 동안 보관된 상품 목록입니다.</div>
+      <div id="favList" style="margin-top: 14px;">
+        <!-- Favorites dynamic list -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       1. INSURANCE DB (50 Verified Items)
+       ========================================================================== */
+    const INSURANCE_DB_V2 = (() => {
+      const groups = [
+        ['삼성화재','https://www.samsungfire.com/m/submain_product.html',[
+          ['다이렉트 AI맞춤보장보험','건강/상해','건강,상해,생활위험','개인 심사 및 선택 보장에 따름'],
+          ['다이렉트 실손의료비보험','실손','입원,통원,실손의료비','계약 유형에 따른 심사'],
+          ['다이렉트 오토바이 운전자보험','운전자','오토바이,교통사고,운전자','이륜차 운전자 관련'],
+          ['자녀보험 꿈나무','어린이','자녀,질병,상해','자녀 가입 대상'],
+          ['운전자보험 안전운전 파트너 플러스','운전자','운전자,교통사고,형사비용','운전 유형 및 인수 심사']]],
+        ['현대해상','https://mdirect.hi.co.kr/service.do?m=074b8f3cf5',[
+          ['굿앤굿어린이종합보험Q(태아)','태아/어린이','태아,신생아,질병','태아 가입 대상'],
+          ['굿앤굿어린이종합보험Q(0~15세)','어린이','어린이,질병,상해','0~15세 안내'],
+          ['퍼펙트건강보험','건강','암,뇌,심장,질병','성인 등 인수 심사'],
+          ['운전자보험','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사'],
+          ['굿앤굿우리펫보험(강아지)','펫','강아지,동물의료비,질병','반려견 가입 대상']]],
+        ['DB손해보험','https://idongbu.co.kr/FMMALV5700.do',[
+          ['참좋은운전자상해보험','운전자','운전자,상해,교통사고','운전 유형 및 인수 심사'],
+          ['아이(I)러브(LOVE)플러스건강보험','어린이/건강','어린이,질병,상해','자녀/건강 가입 대상'],
+          ['참좋은더보장간병보험','간병','간병,장기요양','개별 인수 심사'],
+          ["New I'mOK암보험",'암','암,진단,치료','개별 인수 심사'],
+          ['펫블리 반려묘보험','펫','고양이,동물의료비,질병','반려묘 가입 대상']]],
+        ['KB손해보험','https://www.kbinsure.co.kr/CU400000001.ec?category=insurance',[
+          ['KB 9회주는 암보험Plus','암','암,진단,치료','선택 유형·심사에 따름'],
+          ['KB 금쪽같은 자녀보험Plus','어린이','어린이,질병,상해','자녀 가입 대상'],
+          ['KB 골든라이프케어 간병보험','간병','간병,장기요양','개별 인수 심사'],
+          ['KB The건강한 치아보험','치아','치아,보존치료,보철치료','개별 인수 심사'],
+          ['KB 플러스 운전자상해보험','운전자','운전자,상해,교통사고','운전 유형 및 인수 심사']]],
+        ['메리츠화재','https://www.meritzdirect.com/main.do',[
+          ['올바른 100세건강보험','건강','암,뇌혈관,심장','개별 인수 심사'],
+          ['올케어 보장 꽉 채운 암보험','암','암,진단,치료','개별 인수 심사'],
+          ['올케어 꽉 채운 치아보험','치아','보존치료,보철치료,치아','개별 인수 심사'],
+          ['내Mom같은 어린이보험','어린이','어린이,암,뇌혈관,심장','자녀 가입 대상'],
+          ['메리츠 운전자 상해종합보험','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사']]],
+        ['롯데손해보험','https://online.lotteins.co.kr/web/C/C/store/main.jsp',[
+          ['let:smile 종합건강보험(더끌림 포맨/포우먼)','건강','질병,건강,암','남녀 플랜 구분·심사'],
+          ['let:care 종합암보험(88플러스원)','암','암,진단,치료','개별 인수 심사'],
+          ['let:care 간병보험Ⅱ','간병','간병,치매,장기요양','개별 인수 심사'],
+          ['let:play 자녀보험(도담도담)','어린이','어린이,질병,상해','자녀 가입 대상'],
+          ['운전자보험','운전자','운전자,교통사고','운전 유형 및 인수 심사']]],
+        ['흥국화재','https://www.heungkukfire.co.kr/FRW/gongsi_price/index.do',[
+          ['흥Good Next 더플러스 종합보험(26.09)','건강','암,뇌졸중,심근경색','개별 인수 심사'],
+          ['흥Good 이튼튼한 치아보험(26.01)','치아','치아,치과치료','개별 인수 심사'],
+          ['흥Good 뉴키즈 자녀보험(26.05)','어린이','어린이,질병,상해','자녀 가입 대상'],
+          ['흥Good 든든한 SMILE 운전자 종합보험(26.05)','운전자','운전자,교통사고,상해','운전 유형 및 인수 심사'],
+          ['흥Good 다이렉트 3.5.5 간편건강보험(26.04)','간편건강','유병자,질병,건강','간편고지 유형 구분']]],
+        ['한화손해보험','https://www.hanwhadirect.com/',[
+          ['한화 시그니처 여성 건강보험 4.0(무)','여성/건강','여성암,여성질환,건강','여성 대상·심사'],
+          ['다이렉트 3200운전자보험','운전자','운전자,교통사고','운전 유형 및 인수 심사'],
+          ['다이렉트 내가고른 암보험','암','암,진단,항암치료','개별 인수 심사'],
+          ['한화 운전자상해보험(무)','운전자/상해','운전자,상해,교통사고','운전 유형 및 인수 심사'],
+          ['한화 건강쑥쑥어린이보험(무)','어린이','어린이,질병,상해','자녀 가입 대상']]],
+        ['한화생명','https://direct.hanwhalife.com/app/products/2',[
+          ['한화생명 H건강플러스보험(무)','건강','암,뇌혈관,심장','개별 인수 심사'],
+          ['한화생명 시그니처H암보험(무)','암','암,항암,치료','개별 인수 심사'],
+          ['한화생명 e건강보험(무)(암·뇌·심장)','건강','암,뇌,심장','다이렉트 가입 심사'],
+          ['한화생명 하나로H종신보험(무)','종신','사망,종신','개별 인수 심사'],
+          ['한화생명 e암보험(비갱신형)(무)','암','암,진단','다이렉트 가입 심사']]],
+        ['삼성생명','https://direct.samsunglife.com/',[
+          ['삼성생명 다이렉트 암(갱신)보험','암','암,진단,갱신','다이렉트 가입 심사'],
+          ['삼성생명 다이렉트 암(비갱신)보험','암','암,진단,비갱신','다이렉트 가입 심사'],
+          ['삼성생명 다이렉트 암치료보험','암','암,치료,항암','다이렉트 가입 심사'],
+          ['삼성생명 다이렉트 팩 건강보험(종합팩)','건강','암,뇌,심장,종합','다이렉트 가입 심사'],
+          ['삼성생명 다이렉트 치아보험','치아','치아,치과치료','다이렉트 가입 심사']]]
+      ];
+
+      return groups.flatMap(([insurer,url,items],g)=>items.map(([productName,insuranceType,coverage,conditions],i)=>({
+        id:`VERIFY-${String(g*5+i+1).padStart(3,'0')}`,
+        insurer, productName, insuranceType,
+        mainCoverages:coverage.split(','),
+        eligibilitySummary:conditions,
+        ageMin: null, ageMax: null,
+        sourceUrl:url, sourceKind:'보험사 공식 상품목록/상품안내',
+        checkedAt:'2026-11-11',
+        validationLevel:'official_listing_checked',
+        validationScope:'공식 사이트 상품 표시명과 대표 분야. 약관 미검토',
+        onSaleStatus:'공식 판매·상품안내 페이지 노출 (개별 청약 가능 여부 별도)',
+        recommendationEligible:true,
+        caveat:'표시된 보장은 선택특약·유형에 따라 달라질 수 있으며 정확한 가입연령·심사 결과는 별도 확인',
+      })));
+    })();
+
+    /* Maximum coverage values for scoring normalization */
+    const MAX_DB_COVERAGE_COUNT = Math.max(...INSURANCE_DB_V2.map(item => item.mainCoverages.length));
+    const MAX_DB_COVERAGE_TYPES = 5;
+
+    /* Synonym & Coverage Taxonomies for Intelligent Matching */
+    const COVERAGE_TAXONOMY = {
+      '암': ['암', '여성암', '항암', '진단', '항암치료', '치료'],
+      '어린이': ['어린이', '자녀', '태아', '신생아'],
+      '운전자': ['운전자', '교통사고', '형사비용', '오토바이'],
+      '치아': ['치아', '보존치료', '보철치료', '치과치료'],
+      '간병': ['간병', '장기요양', '치매'],
+      '실손': ['실손', '입원', '통원', '실손의료비'],
+      '건강': ['건강', '질병', '상해', '뇌', '심장', '뇌혈관', '뇌졸중', '심근경색', '여성질환']
+    };
+
+    /* Condition Term Markers */
+    const CONDITION_KEYWORDS = ['성인', '남성', '여성', '자녀', '태아', '유병자', '간편', '이륜차', '오토바이', '반려견', '반려묘', '강아지', '고양이'];
+
+    /* State Management */
+    let activeChips = [];
+    let lastSearchedChips = [];
+    let searchHistory = [];
+    let favorites = [];
+    let currentConditionOnlyResults = [];
+    let conditionDisplayedCount = 0;
+
+    /* Initialize UI */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderChips();
+    });
+
+    /* ==========================================================================
+       2. UI & Chip Input Handlers
+       ========================================================================== */
+    function handleKeyDown(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addChipFromInput();
+      }
+    }
+
+    function addChipFromInput() {
+      const input = document.getElementById('keywordInput');
+      let val = input.value.replace(/,/g, '').trim();
+      if (!val) return;
+
+      if (activeChips.length >= 5) {
+        alert('검색어는 최대 5개까지 등록할 수 있습니다.');
+        return;
+      }
+
+      if (activeChips.includes(val)) {
+        alert('이미 등록된 검색어입니다.');
+        input.value = '';
+        return;
+      }
+
+      activeChips.push(val);
+      input.value = '';
+      renderChips();
+      checkStaleState();
+    }
+
+    function removeChip(index) {
+      activeChips.splice(index, 1);
+      renderChips();
+      checkStaleState();
+    }
+
+    function renderChips() {
+      const container = document.getElementById('chipsContainer');
+      container.innerHTML = activeChips.map((chip, idx) => `
+        <span class="chip">
+          #${escapeHtml(chip)}
+          <span class="chip-remove" onclick="removeChip(${idx})">×</span>
+        </span>
+      `).join('');
+    }
+
+    function checkStaleState() {
+      const staleNotice = document.getElementById('staleNotice');
+      if (lastSearchedChips.length > 0 && JSON.stringify(activeChips) !== JSON.stringify(lastSearchedChips)) {
+        staleNotice.style.display = 'flex';
+      } else {
+        staleNotice.style.display = 'none';
+      }
+    }
+
+    function updateHistoryUI() {
+      const historyContainer = document.getElementById('historyItems');
+      if (searchHistory.length === 0) {
+        historyContainer.innerHTML = '없음';
+        return;
+      }
+      historyContainer.innerHTML = searchHistory.map(h => 
+        `<span class="history-tag" onclick="loadHistory('${escapeHtml(h)}')">${escapeHtml(h)}</span>`
+      ).join(' ');
+    }
+
+    function loadHistory(keywordStr) {
+      activeChips = keywordStr.split(' + ');
+      renderChips();
+      executeSearch();
+    }
+
+    /* ==========================================================================
+       3. Core Recommendation Algorithm & Execution
+       ========================================================================== */
+    function parseKeywords(chips) {
+      const parsed = {
+        conditions: [],
+        ages: [],
+        genders: [],
+        coverages: []
+      };
+
+      chips.forEach(chip => {
+        const ageMatch = chip.match(/(\d+)(세|살)/);
+        if (ageMatch) {
+          parsed.ages.push(parseInt(ageMatch[1], 10));
+          return;
+        }
+
+        if (chip.includes('남성') || chip.includes('남자')) {
+          parsed.genders.push('남성');
+          return;
+        }
+        if (chip.includes('여성') || chip.includes('여자')) {
+          parsed.genders.push('여성');
+          return;
+        }
+
+        if (CONDITION_KEYWORDS.some(ck => chip.includes(ck))) {
+          parsed.conditions.push(chip);
+        } else {
+          parsed.coverages.push(chip);
+        }
+      });
+
+      return parsed;
+    }
+
+    function isConditionMatch(item, parsed) {
+      const text = (item.eligibilitySummary + ' ' + item.insuranceType + ' ' + item.productName).toLowerCase();
+      
+      if (parsed.genders.includes('여성') && text.includes('포맨') && !text.includes('포우먼')) return false;
+      if (parsed.genders.includes('남성') && text.includes('여성') && !text.includes('포맨')) return false;
+
+      if (parsed.conditions.some(c => c.includes('강아지')) && text.includes('고양이')) return false;
+      if (parsed.conditions.some(c => c.includes('고양이')) && text.includes('강아지')) return false;
+
+      return true;
+    }
+
+    function calculateScore(item, coverageKeywords, allChips) {
+      let score = 0;
+      let matchedCount = 0;
+      let directMatchCount = 0;
+      const matchedTypes = new Set();
+      let hasNameMatch = false;
+
+      coverageKeywords.forEach(kw => {
+        let isMatched = false;
+        item.mainCoverages.forEach(cov => {
+          if (cov.includes(kw) || kw.includes(cov)) {
+            isMatched = true;
+            directMatchCount++;
+            matchedTypes.add(cov);
+          } else {
+            for (let [cat, synonyms] of Object.entries(COVERAGE_TAXONOMY)) {
+              if (synonyms.includes(kw) && synonyms.includes(cov)) {
+                isMatched = true;
+                matchedTypes.add(cat);
+              }
+            }
+          }
+        });
+
+        if (item.productName.includes(kw) || item.insuranceType.includes(kw)) {
+          hasNameMatch = true;
+          if (!isMatched) isMatched = true;
+        }
+
+        if (isMatched) matchedCount++;
+      });
+
+      const matchRatio = coverageKeywords.length > 0 ? (matchedCount / coverageKeywords.length) : 0;
+      const scoreTermRatio = matchRatio * 40;
+      const scoreMainCoverage = Math.min(20, directMatchCount * 10);
+      const scoreAllMatch = (matchedCount === coverageKeywords.length && coverageKeywords.length > 0) ? 10 : 0;
+      const scoreCountRatio = Math.min(15, (matchedCount / MAX_DB_COVERAGE_COUNT) * 15);
+      const scoreVariety = Math.min(15, (matchedTypes.size / MAX_DB_COVERAGE_TYPES) * 15);
+
+      score = scoreTermRatio + scoreMainCoverage + scoreAllMatch + scoreCountRatio + scoreVariety;
+
+      return {
+        score,
+        matchedCount,
+        directMatchCount,
+        varietyCount: matchedTypes.size,
+        hasNameMatch
+      };
+    }
+
+    function executeSearch() {
+      if (activeChips.length === 0) {
+        alert('검색어를 입력해 주세요.');
+        return;
+      }
+
+      lastSearchedChips = [...activeChips];
+      checkStaleState();
+
+      const searchStr = activeChips.join(' + ');
+      if (!searchHistory.includes(searchStr)) {
+        searchHistory.unshift(searchStr);
+        if (searchHistory.length > 5) searchHistory.pop();
+        updateHistoryUI();
+      }
+
+      const parsed = parseKeywords(activeChips);
+      const isConditionOnly = parsed.coverages.length === 0;
+
+      const container = document.getElementById('recommendGrid');
+      const compSection = document.getElementById('comparisonSection');
+      const loadMoreContainer = document.getElementById('loadMoreContainer');
+      const resultTitle = document.getElementById('resultTitle');
+      const resultCount = document.getElementById('resultCount');
+
+      container.innerHTML = '';
+      loadMoreContainer.style.display = 'none';
+
+      /* BRANCH 1: Condition Only Search */
+      if (isConditionOnly) {
+        resultTitle.innerText = '가입조건 일치 상품 목록';
+        
+        let matched = INSURANCE_DB_V2.filter(item => isConditionMatch(item, parsed));
+        matched.sort((a, b) => a.insurer.localeCompare(b.insurer, 'ko') || a.productName.localeCompare(b.productName, 'ko'));
+
+        currentConditionOnlyResults = matched;
+        conditionDisplayedCount = 0;
+
+        if (matched.length === 0) {
+          container.innerHTML = '<div style="padding: 40px; text-align: center; color: var(--text-muted);">조건에 맞는 상품을 찾을 수 없습니다. 검색어를 수정해 주세요.</div>';
+          compSection.style.display = 'none';
+          resultCount.innerHTML = '검색 결과 <strong>0</strong>개';
+          return;
+        }
+
+        renderConditionOnlyBatch();
+        return;
+      }
+
+      /* BRANCH 2: Interest Coverage / Hybrid Search (Top 5 Recommendation) */
+      resultTitle.innerText = '맞춤 추천 상품';
+
+      const validItems = INSURANCE_DB_V2.filter(item => isConditionMatch(item, parsed));
+
+      const scoredItems = validItems.map(item => {
+        const evalRes = calculateScore(item, parsed.coverages, activeChips);
+        return { item, ...evalRes };
+      }).filter(x => x.score > 0 || x.hasNameMatch);
+
+      const directMatches = scoredItems.filter(x => x.directMatchCount > 0);
+      const similarMatches = scoredItems.filter(x => x.directMatchCount === 0);
+
+      const sortFn = (a, b) => {
+        if (a.directMatchCount === 0 && b.directMatchCount > 0) return 1;
+        if (a.directMatchCount > 0 && b.directMatchCount === 0) return -1;
+        
+        if (b.score !== a.score) return b.score - a.score;
+        if (b.matchedCount !== a.matchedCount) return b.matchedCount - a.matchedCount;
+        if (b.varietyCount !== a.varietyCount) return b.varietyCount - a.varietyCount;
+        if (a.item.insurer !== b.item.insurer) return a.item.insurer.localeCompare(b.item.insurer, 'ko');
+        return a.item.productName.localeCompare(b.item.productName, 'ko');
+      };
+
+      directMatches.sort(sortFn);
+      similarMatches.sort(sortFn);
+
+      const finalSelected = [];
+      const insurerCounts = {};
+
+      const tryAdd = (entry, isDirect) => {
+        const ins = entry.item.insurer;
+        if ((insurerCounts[ins] || 0) < 2) {
+          insurerCounts[ins] = (insurerCounts[ins] || 0) + 1;
+          finalSelected.push({ ...entry, isDirect });
+          return true;
+        }
+        return false;
+      };
+
+      for (let entry of directMatches) {
+        if (finalSelected.length >= 5) break;
+        tryAdd(entry, true);
+      }
+
+      if (finalSelected.length < 5) {
+        for (let entry of similarMatches) {
+          if (finalSelected.length >= 5) break;
+          tryAdd(entry, false);
+        }
+      }
+
+      resultCount.innerHTML = `추천 결과 <strong>${finalSelected.length}</strong>개 / (전체 검증 50개 기준)`;
+
+      if (finalSelected.length === 0) {
+        container.innerHTML = '<div style="padding: 40px; text-align: center; color: var(--text-muted);">검색된 관심 보장과 일치하는 추천 상품이 없습니다. 검색어를 변경해 보세요.</div>';
+        compSection.style.display = 'none';
+        return;
+      }
+
+      if (finalSelected.length < 5) {
+        resultCount.innerHTML += `<br><span style="font-size:0.8rem; color: #e67e22;">※ 가입조건 및 보장 기준에 들어맞는 상품이 ${finalSelected.length}개로 제한되어 해당 상품만 우선 표시합니다.</span>`;
+      }
+
+      renderRecommendationCards(finalSelected);
+      renderComparisonTable(finalSelected.map(x => x.item), finalSelected);
+    }
+
+    function renderRecommendationCards(selectedList) {
+      const container = document.getElementById('recommendGrid');
+      container.innerHTML = selectedList.map((entry, idx) => {
+        const item = entry.item;
+        const rank = idx + 1;
+        const badgeHTML = entry.isDirect 
+          ? `<span class="badge badge-direct">직접 관련</span>` 
+          : `<span class="badge badge-similar">유사 상품</span>`;
+
+        const reason = generateReasonText(item, entry, activeChips);
+
+        return `
+          <div class="card">
+            <div class="card-header">
+              <div class="card-badge-group">
+                <span class="badge badge-rank">추천 ${rank}위</span>
+                ${badgeHTML}
+              </div>
+              <button class="fav-btn ${isFav(item.id) ? 'active' : ''}" onclick="toggleFav('${item.id}', this)">★</button>
+            </div>
+            <div class="insurer-name">${escapeHtml(item.insurer)}</div>
+            <div class="product-name">${escapeHtml(item.productName)}</div>
+
+            <div class="coverage-tags">
+              ${item.mainCoverages.map(c => `<span class="cov-tag">${escapeHtml(c)}</span>`).join('')}
+            </div>
+
+            <div class="reason-box">
+              💡 <strong>추천 이유:</strong> ${escapeHtml(reason)}
+            </div>
+
+            <div class="card-footer">
+              <span>보장분야: ${escapeHtml(item.insuranceType)}</span>
+              <button class="btn-detail" onclick="openDetailModal('${item.id}')">상세보기</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderConditionOnlyBatch() {
+      const container = document.getElementById('recommendGrid');
+      const loadMoreContainer = document.getElementById('loadMoreContainer');
+      const resultCount = document.getElementById('resultCount');
+
+      const batchSize = 5;
+      const nextBatch = currentConditionOnlyResults.slice(conditionDisplayedCount, conditionDisplayedCount + batchSize);
+      
+      const newCardsHTML = nextBatch.map((item, idx) => {
+        const totalIdx = conditionDisplayedCount + idx + 1;
+        return `
+          <div class="card">
+            <div class="card-header">
+              <div class="card-badge-group">
+                <span class="badge badge-condition">조건일치 #${totalIdx}</span>
+              </div>
+              <button class="fav-btn ${isFav(item.id) ? 'active' : ''}" onclick="toggleFav('${item.id}', this)">★</button>
+            </div>
+            <div class="insurer-name">${escapeHtml(item.insurer)}</div>
+            <div class="product-name">${escapeHtml(item.productName)}</div>
+
+            <div class="coverage-tags">
+              ${item.mainCoverages.map(c => `<span class="cov-tag">${escapeHtml(c)}</span>`).join('')}
+            </div>
+
+            <div class="reason-box">
+              📋 <strong>가입조건:</strong> ${escapeHtml(item.eligibilitySummary)}
+            </div>
+
+            <div class="card-footer">
+              <span>보장분야: ${escapeHtml(item.insuranceType)}</span>
+              <button class="btn-detail" onclick="openDetailModal('${item.id}')">상세보기</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (conditionDisplayedCount === 0) {
+        container.innerHTML = newCardsHTML;
+      } else {
+        container.insertAdjacentHTML('beforeend', newCardsHTML);
+      }
+
+      conditionDisplayedCount += nextBatch.length;
+      resultCount.innerHTML = `가입조건 검색 <strong>${conditionDisplayedCount}</strong> / ${currentConditionOnlyResults.length}개 표시 중`;
+
+      if (conditionDisplayedCount < currentConditionOnlyResults.length) {
+        loadMoreContainer.style.display = 'block';
+      } else {
+        loadMoreContainer.style.display = 'none';
+      }
+
+      const visibleItems = currentConditionOnlyResults.slice(0, conditionDisplayedCount);
+      renderComparisonTable(visibleItems, null);
+    }
+
+    function loadMoreConditionResults() {
+      renderConditionOnlyBatch();
+    }
+
+    function generateReasonText(item, entry, keywords) {
+      if (!entry.isDirect) {
+        return `요청하신 보장과 직접 일치 항목은 없으나 동일 분류 (${item.insuranceType}) 내 가입 조건에 부합하는 유사 상품입니다.`;
+      }
+      const matchedCovs = item.mainCoverages.filter(cov => 
+        keywords.some(kw => cov.includes(kw) || kw.includes(cov))
+      );
+      if (matchedCovs.length > 0) {
+        return `요청하신 핵심 보장 단어(${matchedCovs.join(', ')})와 일치하며 대표 보장이 충실하게 포함된 상품입니다.`;
+      }
+      return `요청하신 주요 관심 질환 및 상해 보장 조건과 높은 연관성을 가집니다.`;
+    }
+
+    /* ==========================================================================
+       4. Comparison Table & Responsive Cards
+       ========================================================================== */
+    function renderComparisonTable(items, metaList) {
+      const compSection = document.getElementById('comparisonSection');
+      const tbody = document.getElementById('compTableBody');
+      const mobileContainer = document.getElementById('mobileCompCards');
+
+      if (!items || items.length === 0) {
+        compSection.style.display = 'none';
+        return;
+      }
+
+      compSection.style.display = 'block';
+
+      tbody.innerHTML = items.map((item, i) => {
+        const meta = metaList ? metaList[i] : null;
+        const typeBadge = meta 
+          ? (meta.isDirect ? '<span style="color:#00b894; font-weight:bold;">직접관련</span>' : '<span style="color:#f59f00; font-weight:bold;">유사상품</span>')
+          : '<span style="color:#1c7ed6; font-weight:bold;">조건일치</span>';
+        
+        return `
+          <tr>
+            <td><strong>${i + 1}</strong></td>
+            <td>${escapeHtml(item.insurer)}</td>
+            <td><strong>${escapeHtml(item.productName)}</strong></td>
+            <td>${escapeHtml(item.insuranceType)}</td>
+            <td>${escapeHtml(item.mainCoverages.join(', '))}</td>
+            <td>${typeBadge}</td>
+          </tr>
+        `;
+      }).join('');
+
+      mobileContainer.innerHTML = items.map((item, i) => {
+        return `
+          <div class="mobile-comp-card">
+            <div><strong>#${i + 1} ${escapeHtml(item.insurer)} - ${escapeHtml(item.productName)}</strong></div>
+            <div>• 종류: ${escapeHtml(item.insuranceType)}</div>
+            <div>• 주요 보장: ${escapeHtml(item.mainCoverages.join(', '))}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* ==========================================================================
+       5. Modal & Favorites Management
+       ========================================================================== */
+    function openDetailModal(id) {
+      const item = INSURANCE_DB_V2.find(x => x.id === id);
+      if (!item) return;
+
+      document.getElementById('mTitle').innerText = item.productName;
+      document.getElementById('mInsurer').innerText = item.insurer;
+      document.getElementById('mType').innerText = item.insuranceType;
+      document.getElementById('mCoverages').innerText = item.mainCoverages.join(', ');
+      document.getElementById('mEligibility').innerText = item.eligibilitySummary;
+      document.getElementById('mCheckedAt').innerText = item.checkedAt;
+      document.getElementById('mStatus').innerText = item.onSaleStatus;
+      document.getElementById('mSource').innerText = item.sourceKind + ' (' + item.sourceUrl + ')';
+      document.getElementById('mCaveat').innerText = '※ ' + item.caveat;
+
+      document.getElementById('detailModal').style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    function isFav(id) {
+      return favorites.includes(id);
+    }
+
+    function toggleFav(id, btnEl) {
+      if (isFav(id)) {
+        favorites = favorites.filter(x => x !== id);
+        btnEl.classList.remove('active');
+      } else {
+        favorites.push(id);
+        btnEl.classList.add('active');
+      }
+    }
+
+    function openFavoritesModal() {
+      const favList = document.getElementById('favList');
+      if (favorites.length === 0) {
+        favList.innerHTML = '<div style="text-align:center; color:var(--text-muted); padding: 20px;">즐겨찾기 한 상품이 없습니다.</div>';
+      } else {
+        const favItems = INSURANCE_DB_V2.filter(x => favorites.includes(x.id));
+        favList.innerHTML = favItems.map(item => `
+          <div style="border-bottom: 1px solid var(--border-color); padding: 10px 0; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:0.8rem; color:var(--text-muted);">${escapeHtml(item.insurer)}</div>
+              <div style="font-weight:700;">${escapeHtml(item.productName)}</div>
+              <div style="font-size:0.8rem; color:#4b6584;">${escapeHtml(item.mainCoverages.join(', '))}</div>
+            </div>
+            <button class="btn-detail" onclick="closeModal('favModal'); openDetailModal('${item.id}')">보기</button>
+          </div>
+        `).join('');
+      }
+      document.getElementById('favModal').style.display = 'flex';
+    }
+
+    function resetAllData() {
+      if (confirm('모든 검색 기록과 즐겨찾기, 입력된 검색어를 초기화하시겠습니까?')) {
+        activeChips = [];
+        lastSearchedChips = [];
+        searchHistory = [];
+        favorites = [];
+        currentConditionOnlyResults = [];
+        conditionDisplayedCount = 0;
+
+        document.getElementById('keywordInput').value = '';
+        renderChips();
+        updateHistoryUI();
+        checkStaleState();
+
+        document.getElementById('recommendGrid').innerHTML = '';
+        document.getElementById('comparisonSection').style.display = 'none';
+        document.getElementById('loadMoreContainer').style.display = 'none';
+        document.getElementById('resultCount').innerHTML = '';
+        document.getElementById('resultTitle').innerText = '추천 결과';
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
